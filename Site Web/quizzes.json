@@ -170,7 +170,7 @@
       "id": "quiz-general",
       "title": "Quiz Général - IA et Fake News",
       "description": "20 questions pour tester l'ensemble de vos connaissances sur l'IA et les fake news",
-      "questionsCount": 20,
+      "questionsCount": 12,
       "questions": [
         {
           "id": "gq1",
@@ -433,7 +433,7 @@
   "metadata": {
     "version": "1.0",
     "author": "Quiz IA & Fake News",
-    "totalQuestions": 40,
+    "totalQuestions": 32,
     "lastUpdated": "2025"
   }
 }
