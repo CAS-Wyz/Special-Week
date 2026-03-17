@@ -59,6 +59,23 @@ body {
   margin-top: 5px;
 }
 
+.score-reset-btn {
+  background: none;
+  border: 1px solid #3d1b54;
+  color: #8b7a9f;
+  font-size: 0.75em;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.2s ease;
+}
+
+.score-reset-btn:hover {
+  border-color: #ff4444;
+  color: #ff4444;
+}
+
 /* --- Liste des Jeux --- */
 .games-list {
   display: flex;

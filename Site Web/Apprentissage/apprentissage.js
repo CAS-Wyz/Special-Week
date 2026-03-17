@@ -22,6 +22,16 @@ function ajouterPoints(points) {
     }
 }
 
+function resetScore() {
+  localStorage.setItem('globalScore', 0);
+  document.getElementById('global-score-number').innerText = 0;
+
+  const progression = JSON.parse(localStorage.getItem('progression')) || {};
+  progression.quiz = 'NOUVEAU';
+  localStorage.setItem('progression', JSON.stringify(progression));
+  chargerBadges();
+}
+
 // On lance le chargement au démarrage
 window.addEventListener('DOMContentLoaded', () => {
     chargerScore();

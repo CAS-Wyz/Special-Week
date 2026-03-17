@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz intégral — Clairvo'lAnce</title>
+  <link rel="stylesheet" href="apprentissage.css">
+  <link rel="stylesheet" href="quiz.css">
+  <link rel="icon" type="image/png" href="../src/Logo Special Week.png">
+</head>
+<body>
+
+  <main class="quiz-wrapper">
+
+    <div id="quiz-start" class="quiz-start-screen">
+      <div class="quiz-start-icon">🧠</div>
+      <h1 class="quiz-start-title">Quiz intégral</h1>
+      <p class="quiz-start-desc">20 questions sur les 4 modules pour tester l'ensemble de tes connaissances sur l'IA et les fake news.</p>
+      <button class="quiz-launch-btn" onclick="startQuiz()">Commencer</button>
+      <a href="apprentissage.html" class="quiz-back-link">← Retour aux jeux</a>
+    </div>
+
+    <div id="quiz-game" class="hidden">
+      <div class="quiz-top-bar">
+        <a href="apprentissage.html" class="quiz-back-link">← Retour</a>
+        <div class="quiz-progress-label">Question <span id="q-current">1</span> / <span id="q-total">20</span></div>
+        <div class="quiz-score-live">Score : <span id="q-score">0</span></div>
+      </div>
+
+      <div class="quiz-progress-bar-track">
+        <div id="quiz-progress-bar" class="quiz-progress-bar-fill"></div>
+      </div>
+
+      <div class="quiz-card">
+        <div class="quiz-category-label" id="q-category"></div>
+        <p class="quiz-question-text" id="q-question"></p>
+        <div id="q-options" class="quiz-options-list"></div>
+        <p id="q-explanation" class="quiz-explanation hidden"></p>
+      </div>
+    </div>
+
+    <div id="quiz-end" class="hidden">
+      <div class="quiz-end-card">
+        <div class="quiz-end-icon">🎯</div>
+        <p class="quiz-end-score-label">Ton score</p>
+        <p class="quiz-end-score" id="end-score">0 / 20</p>
+        <p class="quiz-end-msg" id="end-msg"></p>
+        <button class="quiz-launch-btn" onclick="restartQuiz()">Recommencer</button>
+        <a href="apprentissage.html" class="quiz-back-link">← Retour aux jeux</a>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="../header.js"></script>
+  <script src="quiz.js"></script>
+  <script src="../footer.js"></script>
+</body>
+</html>
