@@ -1,0 +1,207 @@
+/* Permet le scroll fluide pour les ancres (#) */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0b0114; /* Couleur de fond sombre */
+  color: #d1c4e9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navigation sous le header */
+.sub-nav {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  background-color: transparent;
+  border: 1px solid #3d1b54;
+  color: #8b7a9f;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover, .nav-btn.active {
+  border-color: #b026ff;
+  color: #e0d4f5;
+  background-color: rgba(176, 38, 255, 0.1);
+}
+
+/* Cartes de la liste */
+.topic-card {
+  background-color: #1a0a24;
+  border-left: 4px solid #b026ff;
+  border-radius: 8px;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.topic-card:hover {
+  background-color: #230e30;
+  transform: translateX(5px); /* Petit effet au survol */
+}
+
+.topic-card h2, .detail-card h2 {
+  color: #e0d4f5;
+  margin-top: 0;
+  font-size: 1.4em;
+  font-weight: normal;
+}
+
+.topic-card p {
+  margin: 0;
+  color: #8b7a9f;
+  font-size: 0.95em;
+}
+
+/* Vue Détail */
+.hidden {
+  display: none !important;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #b026ff;
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+.detail-card {
+  background-color: #1a0a24;
+  border-left: 4px solid #b026ff;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.detail-card p {
+  color: #e0d4f5;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Bouton Quiz */
+.quiz-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.quiz-btn {
+  background-color: #b026ff;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 1.1em;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.quiz-btn:hover {
+  background-color: #901ad6;
+}
+/* Le style par défaut d'un lien du menu */
+.nav-btn {
+  background-color: transparent;
+  border: 1px solid #3d1b54;
+  color: #8b7a9f;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+}
+
+/* Le style quand on passe la souris dessus */
+.nav-btn:hover {
+  border-color: #b026ff;
+  color: #e0d4f5;
+  background-color: rgba(176, 38, 255, 0.1);
+}
+
+/* LE STYLE QUAND LE TITRE EST SÉLECTIONNÉ (La classe 'active' qu'on ajoute en JS) */
+.nav-btn.active {
+  background-color: #b026ff; /* Fond violet plein */
+  color: white;              /* Texte blanc */
+  border-color: #b026ff;
+  font-weight: bold;
+}
+
+/* Style de la section Quiz */
+.quiz-section {
+  background-color: transparent;
+  border: 1px solid #3d1b54;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.quiz-header {
+  color: #b026ff;
+  font-size: 0.85em;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.quiz-question-block {
+  margin-bottom: 30px;
+}
+
+.quiz-question {
+  color: #e0d4f5;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 1.05em;
+}
+
+.quiz-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background-color: transparent;
+  border: 1px solid #3d1b54;
+  color: #8b7a9f;
+  padding: 12px 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  line-height: 1.4;
+}
+
+.quiz-option:hover {
+  border-color: #b026ff;
+  color: #e0d4f5;
+  background-color: rgba(176, 38, 255, 0.1);
+}
