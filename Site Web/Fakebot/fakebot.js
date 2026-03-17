@@ -3,6 +3,15 @@
 // --- Sélecteurs DOM ---
 const form = document.getElementById('chat-form');
 const input = document.getElementById('input');
+// Permet d'envoyer le message avec "Entrée" sans cliquer sur le bouton
+input.addEventListener('keydown', (e) => {
+  // ENTER sans Shift = envoyer
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();     // empêche le retour à la ligne
+    form.dispatchEvent(new Event('submit')); // déclenche l'envoi
+  }
+});
+
 const messages = document.getElementById('messages');
 const statusEl = document.getElementById('status');
 
