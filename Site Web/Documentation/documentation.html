@@ -6,8 +6,55 @@
   <title>Documentation — Clairvo'lAnce</title>
   <link rel="stylesheet" href="documentation.css">
 </head>
-<body>
+<body><main class="main-container">
+  
+    <nav class="sub-nav">
+  <a href="sujet1.html" class="nav-btn">Qu'est ce que l'IA ?</a>
+  <a href="sujet2.html" class="nav-btn">Pourquoi l'IA peut inventer des choses ?</a>
+  <a href="sujet3.html" class="nav-btn">Qu'est-ce qu'une fake news ?</a>
+  <a href="sujet4.html" class="nav-btn">Comment repérer un contenu douteux à l'IA ?</a>
+</nav>
+  
+
+  <div id="list-view">
+    <article id="ia-def" class="topic-card" onclick="window.location.href='sujet1.html'">
+      <h2>Qu'est ce que l'IA ?</h2>
+      <p>Un programme qui apprend à partir de millions de données pour imiter la compréhension humaine et générer du contenu.</p>
+    </article>
+
+    <article id="ia-invent" class="topic-card" onclick="window.location.href='sujet2.html'">
+      <h2>Pourquoi l'IA peut inventer des choses ?</h2>
+      <p>Un programme qui apprend à partir de millions de données pour imiter la compréhension humaine et générer du contenu.</p>
+    </article>
+
+    <article id="fake-news" class="topic-card" onclick="window.location.href='sujet3.html'">
+      <h2>Qu'est-ce qu'une fake news ?</h2>
+      <p>Un programme qui apprend à partir de millions de données pour imiter la compréhension humaine et générer du contenu.</p>
+    </article>
+
+    <article id="douteux" class="topic-card" onclick="window.location.href='sujet4.html'">
+      <h2>Comment repérer un contenu douteux à l'IA ?</h2>
+      <p>Un programme qui apprend à partir de millions de données pour imiter la compréhension humaine et générer du contenu.</p>
+    </article>
+  </div>
+</main>
+
+<script>
+  function changeActive(event) {
+    // 1. On cherche tous les boutons du menu
+    let boutons = document.querySelectorAll('.nav-btn');
+    
+    // 2. On leur enlève à tous la couleur "active"
+    boutons.forEach(function(btn) {
+      btn.classList.remove('active');
+    });
+    
+    // 3. On ajoute la couleur "active" uniquement sur celui qu'on vient de cliquer
+    event.currentTarget.classList.add('active');
+  }
+</script>
   <script src="../header.js"></script>
+  <script src="/Site Web/Documentation/documentation.js"></script>
 
   <!-- Contenu de la page -->
 
