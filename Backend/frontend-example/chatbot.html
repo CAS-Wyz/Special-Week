@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot - Vrai ou Faux ?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #ff00ff;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px #ff00ff;
+        }
+
+        .subtitle {
+            color: #00ffff;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 0, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .chat-messages {
+            min-height: 200px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            padding: 15px 20px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .bot-message {
+            background: linear-gradient(135deg, rgba(255, 0, 255, 0.2), rgba(0, 255, 255, 0.1));
+            border-left: 3px solid #ff00ff;
+        }
+
+        .bot-message::before {
+            content: '🤖 ';
+        }
+
+        .user-message {
+            background: rgba(0, 255, 255, 0.1);
+            border-left: 3px solid #00ffff;
+            margin-left: 40px;
+        }
+
+        .result-message {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid #ffff00;
+            font-size: 0.95rem;
+        }
+
+        .result-message.correct {
+            border-left-color: #00ff00;
+        }
+
+        .result-message.incorrect {
+            border-left-color: #ff0000;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-vrai {
+            background: linear-gradient(135deg, #00ff00, #00aa00);
+            color: #000;
+        }
+
+        .btn-vrai:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+        }
+
+        .btn-faux {
+            background: linear-gradient(135deg, #ff0000, #aa0000);
+            color: #fff;
+        }
+
+        .btn-faux:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        }
+
+        .btn-suivant {
+            background: linear-gradient(135deg, #ff00ff, #aa00aa);
+            color: #fff;
+        }
+
+        .btn-suivant:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+        }
+
+        .score-display {
+            margin-top: 30px;
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .score-number {
+            font-size: 2rem;
+            color: #00ffff;
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .loading {
+            text-align: center;
+            color: #ff00ff;
+            padding: 20px;
+        }
+
+        .loading::after {
+            content: '...';
+            animation: dots 1s infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60%, 100% { content: '...'; }
+        }
+    </style>
+</head>
+<body>
+    <h1>🤖 Chatbot Vrai/Faux</h1>
+    <p class="subtitle">L'IA affirme des choses... mais dit-elle la vérité ?</p>
+
+    <div class="chat-container">
+        <div class="chat-messages" id="chatMessages">
+            <div class="loading" id="loading">Chargement</div>
+        </div>
+
+        <div class="buttons" id="buttons">
+            <button class="btn-vrai hidden" id="btnVrai" onclick="repondre(true)">✅ Vrai</button>
+            <button class="btn-faux hidden" id="btnFaux" onclick="repondre(false)">❌ Faux</button>
+            <button class="btn-suivant hidden" id="btnSuivant" onclick="nouvelleAffirmation()">➡️ Suivant</button>
+        </div>
+
+        <div class="score-display">
+            <p>Score actuel</p>
+            <p class="score-number"><span id="scoreCorrect">0</span> / <span id="scoreTotal">0</span></p>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script>
+        // Variables globales
+        let affirmationActuelle = null;
+        let scoreCorrect = 0;
+        let scoreTotal = 0;
+
+        // Éléments DOM
+        const chatMessages = document.getElementById('chatMessages');
+        const loading = document.getElementById('loading');
+        const btnVrai = document.getElementById('btnVrai');
+        const btnFaux = document.getElementById('btnFaux');
+        const btnSuivant = document.getElementById('btnSuivant');
+
+        /**
+         * Ajoute un message dans le chat
+         */
+        function ajouterMessage(texte, type = 'bot') {
+            const div = document.createElement('div');
+            div.className = `message ${type}-message`;
+            div.textContent = texte;
+            chatMessages.appendChild(div);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        /**
+         * Charge une nouvelle affirmation
+         */
+        async function nouvelleAffirmation() {
+            // Reset UI
+            loading.classList.remove('hidden');
+            btnVrai.classList.add('hidden');
+            btnFaux.classList.add('hidden');
+            btnSuivant.classList.add('hidden');
+
+            // Appel API
+            const data = await getAffirmation();
+            
+            loading.classList.add('hidden');
+
+            if (data) {
+                affirmationActuelle = data;
+                ajouterMessage(data.messageChatbot, 'bot');
+                
+                // Affiche les boutons
+                btnVrai.classList.remove('hidden');
+                btnFaux.classList.remove('hidden');
+            } else {
+                ajouterMessage("Oups, je n'ai plus d'idées pour le moment ! 🤷", 'bot');
+            }
+        }
+
+        /**
+         * L'utilisateur répond Vrai ou Faux
+         */
+        async function repondre(estVrai) {
+            if (!affirmationActuelle) return;
+
+            // Affiche la réponse de l'utilisateur
+            ajouterMessage(estVrai ? "Je pense que c'est VRAI" : "Je pense que c'est FAUX", 'user');
+
+            // Cache les boutons de réponse
+            btnVrai.classList.add('hidden');
+            btnFaux.classList.add('hidden');
+
+            // Vérifie la réponse
+            const resultat = await verifierReponse(affirmationActuelle.id, estVrai);
+
+            if (resultat) {
+                // Met à jour le score
+                scoreTotal++;
+                if (resultat.correct) {
+                    scoreCorrect++;
+                }
+                document.getElementById('scoreCorrect').textContent = scoreCorrect;
+                document.getElementById('scoreTotal').textContent = scoreTotal;
+
+                // Affiche le résultat
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message result-message ${resultat.correct ? 'correct' : 'incorrect'}`;
+                messageDiv.innerHTML = `
+                    <strong>${resultat.correct ? '✅ Correct !' : '❌ Incorrect !'}</strong><br>
+                    ${resultat.messageChatbot}<br><br>
+                    <em>💡 ${resultat.explication}</em>
+                `;
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                // Affiche le bouton suivant
+                btnSuivant.classList.remove('hidden');
+            }
+        }
+
+        // Démarre le jeu au chargement
+        document.addEventListener('DOMContentLoaded', () => {
+            nouvelleAffirmation();
+        });
+    </script>
+</body>
+</html>

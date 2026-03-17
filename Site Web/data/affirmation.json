@@ -1,0 +1,214 @@
+{
+  "affirmations": [
+    {
+      "id": 1,
+      "texte": "La Grande Muraille de Chine est visible depuis l'espace à l'œil nu.",
+      "estVrai": false,
+      "explication": "C'est un mythe populaire. La muraille mesure environ 6 mètres de large, ce qui est trop étroit pour être visible depuis l'orbite terrestre sans aide optique.",
+      "categorie": "geographie"
+    },
+    {
+      "id": 2,
+      "texte": "Le miel est le seul aliment qui ne périme jamais.",
+      "estVrai": true,
+      "explication": "Grâce à sa faible teneur en eau et ses propriétés antibactériennes naturelles, le miel peut se conserver indéfiniment s'il est stocké correctement.",
+      "categorie": "science"
+    },
+    {
+      "id": 3,
+      "texte": "Les humains n'utilisent que 10% de leur cerveau.",
+      "estVrai": false,
+      "explication": "C'est un mythe. Les scanners cérébraux montrent que nous utilisons la totalité de notre cerveau, même si pas toutes les zones simultanément.",
+      "categorie": "science"
+    },
+    {
+      "id": 4,
+      "texte": "Napoléon Bonaparte était de petite taille.",
+      "estVrai": false,
+      "explication": "Napoléon mesurait environ 1,69 m, ce qui était la taille moyenne pour un Français de l'époque. La confusion vient des différences entre les mesures françaises et anglaises.",
+      "categorie": "histoire"
+    },
+    {
+      "id": 5,
+      "texte": "Les éclairs peuvent frapper deux fois au même endroit.",
+      "estVrai": true,
+      "explication": "Contrairement au dicton populaire, la foudre peut tout à fait frapper plusieurs fois au même endroit. L'Empire State Building est frappé environ 25 fois par an.",
+      "categorie": "science"
+    },
+    {
+      "id": 6,
+      "texte": "Les Vikings portaient des casques à cornes.",
+      "estVrai": false,
+      "explication": "Aucune preuve archéologique ne montre que les Vikings portaient des casques à cornes au combat. Cette image vient du romantisme du 19e siècle.",
+      "categorie": "histoire"
+    },
+    {
+      "id": 7,
+      "texte": "On avale en moyenne 8 araignées par an pendant notre sommeil.",
+      "estVrai": false,
+      "explication": "C'est une légende urbaine. Les araignées évitent les humains et les vibrations de notre respiration les éloignent.",
+      "categorie": "science"
+    },
+    {
+      "id": 8,
+      "texte": "Les chauves-souris sont aveugles.",
+      "estVrai": false,
+      "explication": "Les chauves-souris voient très bien ! Elles utilisent l'écholocation en complément de leur vue, pas en remplacement.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 9,
+      "texte": "Le sang désoxygéné est bleu.",
+      "estVrai": false,
+      "explication": "Le sang est toujours rouge, qu'il soit oxygéné ou non. Les veines paraissent bleues à cause de la façon dont la lumière traverse la peau.",
+      "categorie": "science"
+    },
+    {
+      "id": 10,
+      "texte": "Albert Einstein a échoué en mathématiques à l'école.",
+      "estVrai": false,
+      "explication": "Einstein excellait en mathématiques. Cette légende vient d'une confusion avec le système de notation suisse où 6 est la meilleure note.",
+      "categorie": "histoire"
+    },
+    {
+      "id": 11,
+      "texte": "Les poissons rouges ont une mémoire de 3 secondes.",
+      "estVrai": false,
+      "explication": "Des études ont montré que les poissons rouges peuvent se souvenir de choses pendant plusieurs mois et apprendre des tâches complexes.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 12,
+      "texte": "La Tour Eiffel peut grandir de 15 cm en été.",
+      "estVrai": true,
+      "explication": "Le métal se dilate avec la chaleur. Lors des journées chaudes, la Tour Eiffel peut effectivement gagner jusqu'à 15 cm de hauteur.",
+      "categorie": "science"
+    },
+    {
+      "id": 13,
+      "texte": "Cléopâtre était égyptienne.",
+      "estVrai": false,
+      "explication": "Cléopâtre était d'origine grecque macédonienne, descendante de Ptolémée, un général d'Alexandre le Grand.",
+      "categorie": "histoire"
+    },
+    {
+      "id": 14,
+      "texte": "Les diamants sont faits de charbon compressé.",
+      "estVrai": false,
+      "explication": "Bien que diamants et charbon soient du carbone, les diamants se forment dans le manteau terrestre, pas à partir de charbon qui se forme en surface.",
+      "categorie": "science"
+    },
+    {
+      "id": 15,
+      "texte": "On perd la majorité de sa chaleur corporelle par la tête.",
+      "estVrai": false,
+      "explication": "La tête ne représente qu'environ 10% de la surface corporelle et perd une proportion similaire de chaleur. Cette croyance vient d'une étude militaire mal interprétée.",
+      "categorie": "science"
+    },
+    {
+      "id": 16,
+      "texte": "Les autruches mettent leur tête dans le sable quand elles ont peur.",
+      "estVrai": false,
+      "explication": "Les autruches ne font pas ça. Quand elles sont menacées, elles courent (jusqu'à 70 km/h) ou se battent avec leurs pattes puissantes.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 17,
+      "texte": "Il y a plus d'étoiles dans l'univers que de grains de sable sur Terre.",
+      "estVrai": true,
+      "explication": "Les astronomes estiment qu'il y a environ 70 milliards de milliards d'étoiles dans l'univers observable, ce qui dépasse le nombre de grains de sable sur Terre.",
+      "categorie": "science"
+    },
+    {
+      "id": 18,
+      "texte": "Le mot 'robot' a été inventé par un écrivain tchèque.",
+      "estVrai": true,
+      "explication": "Le mot 'robot' vient du tchèque 'robota' (travail forcé) et a été popularisé par Karel Čapek dans sa pièce R.U.R. en 1920.",
+      "categorie": "technologie"
+    },
+    {
+      "id": 19,
+      "texte": "Christophe Colomb a découvert que la Terre était ronde.",
+      "estVrai": false,
+      "explication": "Les Grecs anciens savaient déjà que la Terre était ronde. Ératosthène a même calculé sa circonférence au 3e siècle avant J.-C.",
+      "categorie": "histoire"
+    },
+    {
+      "id": 20,
+      "texte": "Les bananes poussent sur des arbres.",
+      "estVrai": false,
+      "explication": "Le bananier n'est pas un arbre mais une plante herbacée géante. Son 'tronc' est en fait constitué de feuilles enroulées.",
+      "categorie": "nature"
+    },
+    {
+      "id": 21,
+      "texte": "Le premier ordinateur pesait plus de 27 tonnes.",
+      "estVrai": true,
+      "explication": "L'ENIAC, considéré comme le premier ordinateur électronique, pesait environ 27 tonnes et occupait 167 m² en 1945.",
+      "categorie": "technologie"
+    },
+    {
+      "id": 22,
+      "texte": "Les chameaux stockent de l'eau dans leurs bosses.",
+      "estVrai": false,
+      "explication": "Les bosses des chameaux contiennent de la graisse, pas de l'eau. Cette graisse leur sert de réserve d'énergie.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 23,
+      "texte": "Marie-Antoinette a dit 'Qu'ils mangent de la brioche'.",
+      "estVrai": false,
+      "explication": "Cette phrase n'a jamais été prononcée par Marie-Antoinette. Elle apparaît dans les écrits de Rousseau alors qu'elle n'avait que 9 ans.",
+      "categorie": "histoire"
+    },
+    {
+      "id": 24,
+      "texte": "Une année sur Vénus est plus courte qu'un jour sur Vénus.",
+      "estVrai": true,
+      "explication": "Vénus met 225 jours terrestres pour orbiter autour du Soleil, mais 243 jours pour faire un tour sur elle-même.",
+      "categorie": "science"
+    },
+    {
+      "id": 25,
+      "texte": "Le premier SMS de l'histoire disait 'Merry Christmas'.",
+      "estVrai": true,
+      "explication": "Le premier SMS a été envoyé le 3 décembre 1992 par Neil Papworth à Richard Jarvis, avec le message 'Merry Christmas'.",
+      "categorie": "technologie"
+    },
+    {
+      "id": 26,
+      "texte": "Thomas Edison a inventé l'ampoule électrique.",
+      "estVrai": false,
+      "explication": "Edison a amélioré et commercialisé l'ampoule, mais d'autres inventeurs comme Humphry Davy et Joseph Swan avaient déjà créé des versions avant lui.",
+      "categorie": "histoire"
+    },
+    {
+      "id": 27,
+      "texte": "Le cerveau humain consomme environ 20% de l'énergie du corps.",
+      "estVrai": true,
+      "explication": "Bien que ne représentant que 2% du poids corporel, le cerveau utilise environ 20% de notre consommation d'oxygène et de calories.",
+      "categorie": "science"
+    },
+    {
+      "id": 28,
+      "texte": "Les carottes améliorent la vision nocturne.",
+      "estVrai": false,
+      "explication": "Cette croyance vient d'une campagne de désinformation britannique pendant la Seconde Guerre mondiale pour cacher l'invention du radar.",
+      "categorie": "histoire"
+    },
+    {
+      "id": 29,
+      "texte": "Les humains et les bananes partagent environ 60% de leur ADN.",
+      "estVrai": true,
+      "explication": "Les humains partagent effectivement environ 60% de leur ADN avec les bananes, car nous avons des ancêtres cellulaires communs.",
+      "categorie": "science"
+    },
+    {
+      "id": 30,
+      "texte": "ChatGPT a été créé par Google.",
+      "estVrai": false,
+      "explication": "ChatGPT a été créé par OpenAI, pas par Google. Google a développé son propre assistant IA appelé Bard (maintenant Gemini).",
+      "categorie": "technologie"
+    }
+  ]
+}
