@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Documentation — Clairvo'lAnce</title>
+  <title>Qu'est ce que l'IA ?</title>
   <link rel="stylesheet" href="documentation.css">
+  <link rel="icon" type="image/png" href="../src/Logo Special Week.png">
 </head>
 <body>
     <main class="main-container">
@@ -16,8 +17,8 @@
   <a href="sujet4.html" class="nav-btn">Comment repérer un contenu douteux à l'IA ?</a>
 </nav>  
   <article class="detail-card">
-    <h2>Le Titre de ton sujet</h2>
-    <p>En une phrase, l'Intelligence Artificielle est considérée comme tout outil utilisé par une machine capable de "reproduire des comportements liés aux humains, tels que le raisonnement, la planification et la créativité".</p>
+    <h2>Qu'est ce que l'IA ?</h2>
+    <p>En une phrase, l’Intelligence Artificielle est considérée comme tout outil utilisé par une machine capable de “reproduire des comportements liés aux humains, tels que le raisonnement, la planification et la créativité”.</p>
     
     <p>Mais commençons d'abord par un peu d'histoire.<br>
     L'intelligence artificielle commence à se développer après la Seconde Guerre mondiale, avec l'invention des ordinateurs programmables. Le terme « intelligence artificielle » est proposé par le chercheur John McCarthy en 1956.</p>
@@ -31,29 +32,8 @@
     <button class="quiz-btn" onclick="toggleQuiz()">Mini quiz juste ici !</button>
   </div>
 
-  <div id="quiz-section" class="quiz-section hidden">
-    <div class="quiz-header">// MINI-QUIZ • PARTIE 1</div>
-
-    <div class="quiz-question-block">
-      <p class="quiz-question">Comment peut-on définir l'intelligence artificielle en une phrase ?</p>
-      <button class="quiz-option">L'intelligence artificielle désigne uniquement des robots physiques capables de marcher et de parler comme des humains.</button>
-      <button class="quiz-option">L'intelligence artificielle est une technologie qui permet aux machines d'imiter certaines capacités humaines comme apprendre ou résoudre des problèmes.</button>
-      <button class="quiz-option">Un bug d'affichage. L'intelligence artificielle est un programme qui remplace complètement l'esprit humain et prend toutes les décisions sans aucune intervention humaine.</button>
-    </div>
-
-    <div class="quiz-question-block">
-      <p class="quiz-question">Quand et dans quel contexte historique l'intelligence artificielle a-t-elle commencé à se développer ?</p>
-      <button class="quiz-option">L'intelligence artificielle a commencé à se développer au Moyen Âge, lorsque les alchimistes ont tenté de créer des automates magiques.</button>
-      <button class="quiz-option">L'intelligence artificielle a commencé à se développer dans les années 1950, avec l'apparition des premiers ordinateurs après la Seconde Guerre mondiale.</button>
-      <button class="quiz-option">L'intelligence artificielle a émergé dans les années 1920, grâce à l'invention de la télévision et du cinéma parlant.</button>
-    </div>
-
-    <div class="quiz-question-block">
-      <p class="quiz-question">Qui a proposé le terme « intelligence artificielle » et en quelle année ?</p>
-      <button class="quiz-option">Le terme « intelligence artificielle » a été proposé par Albert Einstein en 1921.</button>
-      <button class="quiz-option">Le terme « intelligence artificielle » a été proposé par John McCarthy en 1956.</button>
-      <button class="quiz-option">Le terme « intelligence artificielle » a été inventé par Nikola Tesla en 1905.</button>
-    </div>
+  <div id="quiz-section" class="quiz-section hidden" data-partie="partie1">
+    <div id="quiz-content"></div>
   </div>
 </main>
 <script src="documentation.js"></script>
