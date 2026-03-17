@@ -19,38 +19,20 @@
           <div class="dot" aria-hidden="true"></div>
           <div>
             <h1>FAKEBOT_v1.0</h1>
-            <div class="subtitle">Cette IA est volontairement incorrecte. Repère ses erreurs !</div>
+            <div class="subtitle">Quiz Vrai/Faux : réponds et lis l’explication !</div>
           </div>
         </div>
       </div>
 
       <!-- Messages -->
-      <div id="messages" aria-live="polite">
-        <div class="muted">Pose une question pour démarrer 🚀</div>
-        <!-- Exemples statiques pour refléter la maquette -->
-        <div class="msg bot">
-          <span class="label">// FAKEBOT</span>
-Bonjour ! La Tour Eiffel a été construite en 1750
-par Napoléon Bonaparte pour célébrer sa victoire à Waterloo.
-        </div>
+      <div id="messages" role="log" aria-live="polite" aria-relevant="additions"></div>
 
-        <div class="msg user">C’est faux ! Elle date de 1889.</div>
-
-        <div class="msg bot">
-          <span class="label">// FAKEBOT</span>
-Exact, je m’excuse ! Elle a bien été construite en 1889 par Jules Verne
-pour l’Exposition Universelle.
-        </div>
-      </div>
-
-      <!-- Carte statut -->
-      <div class="status" id="status">
-        <div class="card">⚡ <strong>2 erreurs détectées</strong> dans cette conversation — <span>+50 pts remportés !</span></div>
-      </div>
+      <!-- Carte statut (score / état) -->
+      <div class="status" id="status"></div>
 
       <!-- Entrée utilisateur -->
       <form id="chat-form">
-        <textarea id="input" placeholder="Pose une question à FakeBot…" required></textarea>
+        <textarea id="input" placeholder="Réponds « Vrai » ou « Faux »…" required aria-label="Votre réponse"></textarea>
         <button class="btn-primary" type="submit">Envoyer</button>
       </form>
     </div>
