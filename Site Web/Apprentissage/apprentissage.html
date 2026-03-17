@@ -7,7 +7,60 @@
   <link rel="stylesheet" href="apprentissage.css">
 </head>
 <body>
+
+  <main class="games-main-container">
+
+    <section class="score-card">
+  <div class="score-info">
+    <h2 class="score-title">// SCORE GLOBAL</h2>
+    <p class="score-subtitle">3 jeux disponibles</p>
+  </div>
+  <div class="score-points">
+    <span id="global-score-number" class="score-number">0</span>
+    <span class="score-text">points</span>
+  </div>
+</section>
+
+    <section class="games-list">
+
+           <a href="quiz.html" class="game-card">
+        <div class="game-icon-box"><span class="game-emoji">🧠</span></div>
+        <div class="game-details">
+          <h3>Quiz intégral</h3>
+          <p>20 questions sur les 4 modules</p>
+          <span id="badge-quiz" class="game-badge">CHARGEMENT...</span>
+        </div>
+      </a>
+
+      <a href="incoherence.html" class="game-card">
+        <div class="game-icon-box"><span class="game-emoji">🔎</span></div>
+        <div class="game-details">
+          <h3>Trouve l'incohérence</h3>
+          <p>Repère les erreurs de l'IA</p>
+          <span id="badge-incoherence" class="game-badge">CHARGEMENT...</span>
+        </div>
+      </a>
+
+  
+       
+      <a href="fakeoureel.html" class="game-card">
+        <div class="game-icon-box"><span class="game-emoji">🖼️</span></div>
+        <div class="game-details">
+           <h3>Fake ou Réel ?</h3>
+          <p>Images et articles — vrai ou généré par IA ?</p>
+          <span id="badge-fakeoureel" class="game-badge">CHARGEMENT...</span>
+        </div>
+      </a>
+
+    </section>
+
+  </main>
+
+  
+
   <script src="../header.js"></script>
+  
+  <script src="apprentissage.js"></script>
 
   <script src="../footer.js"></script>
 </body>

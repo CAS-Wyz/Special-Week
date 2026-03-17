@@ -1,0 +1,220 @@
+/* --- Styles de base (à conserver si tu fais un nouveau fichier CSS) --- */
+body {
+  background-color: #0b0114; /* Couleur de fond sombre */
+  color: #d1c4e9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Conteneur principal --- */
+.games-main-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* --- Carte Score Global --- */
+.score-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #b026ff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  margin-bottom: 40px;
+}
+
+.score-title {
+  color: #b026ff;
+  font-size: 0.9em;
+  letter-spacing: 2px;
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+}
+
+.score-subtitle {
+  color: #8b7a9f;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.score-points {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.score-number {
+  color: #e0d4f5;
+  font-size: 3.5em;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.score-text {
+  color: #8b7a9f;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+/* --- Liste des Jeux --- */
+.games-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- Cartes de Jeux --- */
+.game-card {
+  display: flex;
+  align-items: center;
+  background-color: #1a0a24;
+  border: 1px solid #3d1b54;
+  border-radius: 12px;
+  padding: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.game-card:hover {
+  border-color: #b026ff;
+  background-color: #230e30;
+  transform: translateY(-3px);
+}
+
+/* Boîte pour l'emoji */
+.game-icon-box {
+  background-color: #2a113b;
+  border: 1px solid #3d1b54;
+  border-radius: 12px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25px;
+  flex-shrink: 0;
+}
+
+.game-emoji {
+  font-size: 1.8em;
+}
+
+/* Détails du jeu (Titre, texte, badge) */
+.game-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.game-details h3 {
+  color: #e0d4f5;
+  margin: 0 0 5px 0;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.game-details p {
+  color: #8b7a9f;
+  margin: 0 0 15px 0;
+  font-size: 0.9em;
+}
+
+/* --- Badges --- */
+.game-badge {
+  font-size: 0.75em;
+  padding: 6px 12px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.badge-unlocked, .badge-level, .badge-new {
+  background-color: transparent;
+  border: 1px solid #5a2a7f;
+  color: #b026ff;
+}
+/* État par défaut (Violet) */
+.game-badge {
+  border: 1px solid #5a2a7f;
+  color: #b026ff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.75em;
+  text-transform: uppercase;
+}
+
+/* État Terminé (Vert/Bleu selon tes goûts) */
+.game-badge.completed {
+  border-color: #00ffcc;
+  color: #00ffcc;
+  background-color: rgba(0, 255, 204, 0.1);
+}
+
+.game-wrapper {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.card-container {
+  background: #1a0a24;
+  border: 2px solid #3d1b54;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+#image-display img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #b026ff;
+  margin-bottom: 20px;
+}
+
+.choice-container {
+  display: flex;
+  gap: 15px;
+}
+
+.choice-btn {
+  flex: 1;
+  padding: 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: transform 0.2s, background 0.3s;
+  color: white;
+}
+
+.choice-btn.real { background-color: #2e7d32; } /* Vert */
+.choice-btn.fake { background-color: #7b1fa2; } /* Violet foncé */
+
+.choice-btn:hover { transform: scale(1.05); }
+
+#feedback.hidden { display: none; }
+
+#feedback {
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background: rgba(176, 38, 255, 0.1);
+  color: #e0d4f5;
+}
+
+.next-btn {
+  background: #b026ff;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
