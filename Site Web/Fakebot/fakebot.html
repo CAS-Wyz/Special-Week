@@ -1,16 +1,97 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>IA — Clairvo'lAnce</title>
-  <link rel="stylesheet" href="fakebot.css">
+  <link rel="stylesheet" href="fakebot.css"/>
 </head>
 <body>
+
   <script src="../header.js"></script>
 
-  <!-- Contenu de la page -->
+  <main>
+    <div class="chat" role="region" aria-label="FakeBot Chat">
+      <!-- Bandeau supérieur -->
+      <div class="topbar">
+        <div class="header-line">
+          <div class="dot" aria-hidden="true"></div>
+          <div>
+            <h1>FAKEBOT_v1.0</h1>
+            <div class="subtitle">Cette IA est volontairement incorrecte. Repère ses erreurs !</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Messages -->
+      <div id="messages" aria-live="polite">
+        <div class="muted">Pose une question pour démarrer 🚀</div>
+        <!-- Exemples statiques pour refléter la maquette -->
+        <div class="msg bot">
+          <span class="label">// FAKEBOT</span>
+Bonjour ! La Tour Eiffel a été construite en 1750
+par Napoléon Bonaparte pour célébrer sa victoire à Waterloo.
+        </div>
+
+        <div class="msg user">C’est faux ! Elle date de 1889.</div>
+
+        <div class="msg bot">
+          <span class="label">// FAKEBOT</span>
+Exact, je m’excuse ! Elle a bien été construite en 1889 par Jules Verne
+pour l’Exposition Universelle.
+        </div>
+      </div>
+
+      <!-- Carte statut -->
+      <div class="status" id="status">
+        <div class="card">⚡ <strong>2 erreurs détectées</strong> dans cette conversation — <span>+50 pts remportés !</span></div>
+      </div>
+
+      <!-- Entrée utilisateur -->
+      <form id="chat-form">
+        <textarea id="input" placeholder="Pose une question à FakeBot…" required></textarea>
+        <button class="btn-primary" type="submit">Envoyer</button>
+      </form>
+    </div>
+  </main>
 
   <script src="../footer.js"></script>
+  <script src="fakebot.js"></script>
 </body>
 </html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Chatbot Gemini</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="dot"></div>
+      <div>
+        <h1>Mini Chatbot • Gemini</h1>
+        <div class="model">Modèle : gemini-3-flash-preview</div>
+      </div>
+    </header>
+
+    <div id="messages" aria-live="polite">
+      <div class="muted">Pose une question pour démarrer 🚀</div>
+    </div>
+
+    <div class="status" id="status"></div>
+
+    <form id="chat-form">
+      <textarea id="input" placeholder="Écris ton message..." required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html> -->
