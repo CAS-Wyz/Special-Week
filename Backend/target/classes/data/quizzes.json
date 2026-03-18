@@ -11,19 +11,19 @@
           "question": "Qui a proposé le terme « intelligence artificielle » et en quelle année ?",
           "options": [
             "Alan Turing en 1950",
+            "Steve Jobs en 1984",
             "John McCarthy en 1956",
-            "Bill Gates en 1975",
-            "Steve Jobs en 1984"
+            "Bill Gates en 1975"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Le terme « intelligence artificielle » a été proposé par le chercheur John McCarthy en 1956."
         },
         {
           "id": "p1q2",
           "question": "Après quel événement historique l'intelligence artificielle a-t-elle commencé à se développer ?",
           "options": [
-            "La Première Guerre mondiale",
             "La Révolution industrielle",
+            "La Première Guerre mondiale",
             "La Seconde Guerre mondiale",
             "La guerre froide"
           ],
@@ -34,10 +34,10 @@
           "id": "p1q3",
           "question": "Qu'est-ce qu'un système expert développé dans les années 1980 ?",
           "options": [
-            "Un robot humanoïde",
-            "Un programme capable d'imiter les décisions d'un spécialiste dans un domaine précis",
             "Un moteur de recherche",
-            "Un réseau social"
+            "Un programme capable d'imiter les décisions d'un spécialiste dans un domaine précis",
+            "Un réseau social",
+            "Un robot humanoïde"
           ],
           "correctIndex": 1,
           "explanation": "Les systèmes experts sont des programmes capables d'imiter les décisions d'un spécialiste dans un domaine précis, comme la médecine ou l'ingénierie."
@@ -46,24 +46,24 @@
           "id": "p1q4",
           "question": "Quels facteurs ont permis à l'IA de progresser rapidement à partir des années 2010 ?",
           "options": [
-            "La diminution du prix des ordinateurs uniquement",
             "L'augmentation des données, la puissance de calcul et le machine learning",
-            "L'invention d'Internet",
-            "La création des smartphones"
+            "La création des smartphones",
+            "La diminution du prix des ordinateurs uniquement",
+            "L'invention d'Internet"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "À partir des années 2010, l'IA progresse grâce à l'augmentation des données disponibles, la puissance de calcul et le développement du machine learning."
         },
         {
           "id": "p1q5",
           "question": "Selon la définition donnée, l'IA est capable de reproduire quels types de comportements humains ?",
           "options": [
-            "Uniquement les émotions",
-            "Le raisonnement, la planification et la créativité",
             "Uniquement les mouvements physiques",
-            "La respiration et la digestion"
+            "La respiration et la digestion",
+            "Uniquement les émotions",
+            "Le raisonnement, la planification et la créativité"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "L'IA est définie comme un outil capable de reproduire des comportements liés aux humains, tels que le raisonnement, la planification et la créativité."
         }
       ]
@@ -78,46 +78,46 @@
           "id": "p2q1",
           "question": "Que signifie l'expression anglaise « fake news » ?",
           "options": [
-            "Nouvelles rapides",
-            "Fausses nouvelles",
             "Bonnes nouvelles",
-            "Anciennes nouvelles"
+            "Nouvelles rapides",
+            "Anciennes nouvelles",
+            "Fausses nouvelles"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "L'expression « fake news » signifie « fausses nouvelles » en français."
         },
         {
           "id": "p2q2",
           "question": "Quel exemple historique de fake news est mentionné, datant d'il y a environ 80 ans ?",
           "options": [
+            "Un canular sur la Lune",
             "Une fausse annonce de fin du monde",
             "Un comédien faisant croire à une invasion martienne à la radio",
-            "Une fausse découverte scientifique",
-            "Un canular sur la Lune"
+            "Une fausse découverte scientifique"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Il y a quatre-vingts ans, un comédien avait effrayé les Américains en faisant croire à une invasion martienne à la radio."
         },
         {
           "id": "p2q3",
           "question": "Pourquoi les fake news ont-elles plus d'impact aujourd'hui qu'avant ?",
           "options": [
-            "Parce que les gens lisent moins",
-            "À cause de la puissance des réseaux sociaux",
             "Parce qu'il y a moins de journalistes",
-            "À cause de la télévision"
+            "À cause de la télévision",
+            "À cause de la puissance des réseaux sociaux",
+            "Parce que les gens lisent moins"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Les fake news ont beaucoup d'impact aujourd'hui à cause de la puissance des réseaux sociaux."
         },
         {
           "id": "p2q4",
           "question": "Sur les réseaux sociaux, quelle obligation ont les utilisateurs concernant les informations qu'ils diffusent ?",
           "options": [
-            "Ils doivent payer pour publier",
             "Ils doivent être journalistes",
+            "Ils doivent attendre 24h avant de publier",
             "Ils n'ont aucune obligation de vérifier",
-            "Ils doivent attendre 24h avant de publier"
+            "Ils doivent payer pour publier"
           ],
           "correctIndex": 2,
           "explanation": "Sur les réseaux sociaux, tout le monde peut diffuser des informations sans obligation de les vérifier."
@@ -126,12 +126,12 @@
           "id": "p2q5",
           "question": "Que font certains enseignants pour lutter contre les fake news ?",
           "options": [
-            "Ils interdisent Internet",
             "Ils mettent en place des cours d'éducation aux médias",
             "Ils suppriment les réseaux sociaux",
-            "Ils créent leurs propres fake news"
+            "Ils créent leurs propres fake news",
+            "Ils interdisent Internet"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Des enseignants mettent en place des cours d'éducation aux médias pour développer l'esprit critique des élèves."
         }
       ]
@@ -147,35 +147,35 @@
           "question": "Comment appelle-t-on les réponses fausses inventées par les chatbots IA ?",
           "options": [
             "Des bugs",
-            "Des virus",
             "Des hallucinations",
+            "Des virus",
             "Des crashes"
           ],
-          "correctIndex": 2,
+          "correctIndex": 1,
           "explanation": "Les réponses fausses données par les chatbots IA sont appelées « hallucinations »."
         },
         {
           "id": "p3q2",
           "question": "Quand se produit une hallucination de l'IA ?",
           "options": [
-            "Quand l'ordinateur surchauffe",
-            "Quand l'IA invente une information au lieu d'admettre qu'elle ne connaît pas la réponse",
             "Quand Internet est coupé",
-            "Quand l'utilisateur pose une question trop simple"
+            "Quand l'ordinateur surchauffe",
+            "Quand l'utilisateur pose une question trop simple",
+            "Quand l'IA invente une information au lieu d'admettre qu'elle ne connaît pas la réponse"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Une hallucination se produit lorsque l'IA invente une information au lieu d'admettre qu'elle ne connaît pas la réponse."
         },
         {
           "id": "p3q3",
           "question": "Pourquoi les chatbots sont-ils encouragés à toujours donner une réponse ?",
           "options": [
-            "Pour faire plaisir aux utilisateurs",
-            "Parce que leur système d'apprentissage valorise les réponses correctes mais ne récompense pas « je ne sais pas »",
             "Parce qu'ils sont programmés pour mentir",
-            "Pour gagner de l'argent"
+            "Pour faire plaisir aux utilisateurs",
+            "Pour gagner de l'argent",
+            "Parce que leur système d'apprentissage valorise les réponses correctes mais ne récompense pas « je ne sais pas »"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Le système d'apprentissage des chatbots valorise les réponses correctes, mais ne récompense pas le fait de dire « je ne sais pas »."
         },
         {
@@ -183,11 +183,11 @@
           "question": "Pour quels types de domaines l'IA fonctionne-t-elle bien ?",
           "options": [
             "Les domaines artistiques uniquement",
-            "Les domaines avec des règles claires, comme l'orthographe ou la grammaire",
             "Les domaines philosophiques",
+            "Les domaines avec des règles claires, comme l'orthographe ou la grammaire",
             "Aucun domaine"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "L'IA fonctionne bien pour des domaines avec des règles claires, comme l'orthographe ou la grammaire."
         },
         {
@@ -195,11 +195,11 @@
           "question": "Comment les chatbots apprennent-ils à répondre ?",
           "options": [
             "En regardant des vidéos",
+            "En lisant uniquement des encyclopédies",
             "En analysant d'immenses quantités de textes",
-            "En parlant avec des humains en direct",
-            "En lisant uniquement des encyclopédies"
+            "En parlant avec des humains en direct"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Les chatbots apprennent en analysant d'immenses quantités de textes pour répondre au mieux."
         }
       ]
@@ -214,44 +214,44 @@
           "id": "p4q1",
           "question": "Quel défaut est souvent visible sur les mains dans les images générées par IA ?",
           "options": [
-            "Elles sont toujours floues",
-            "Elles peuvent avoir trop de doigts ou des doigts collés",
             "Elles sont toujours trop petites",
-            "Elles sont toujours en noir et blanc"
+            "Elles sont toujours en noir et blanc",
+            "Elles sont toujours floues",
+            "Elles peuvent avoir trop de doigts ou des doigts collés"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Les mains générées par IA ont souvent des défauts : trop de doigts ou des doigts collés entre eux."
         },
         {
           "id": "p4q2",
           "question": "Quel outil permet de vérifier si une image existe déjà ailleurs sur Internet ?",
           "options": [
-            "Google Maps",
-            "Google Lens (recherche inversée)",
+            "Google Calendar",
             "Google Translate",
-            "Google Calendar"
+            "Google Maps",
+            "Google Lens (recherche inversée)"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Des outils comme Google Lens permettent de faire une recherche inversée pour voir si une image existe déjà ailleurs sur Internet."
         },
         {
           "id": "p4q3",
           "question": "Quel aspect de la peau peut sembler suspect sur une image générée par IA ?",
           "options": [
-            "Elle est toujours ridée",
             "Elle peut être trop lisse, comme en plastique",
-            "Elle est toujours bronzée",
-            "Elle a toujours des taches"
+            "Elle a toujours des taches",
+            "Elle est toujours ridée",
+            "Elle est toujours bronzée"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Sur les images IA, la peau peut être trop lisse, comme en plastique."
         },
         {
           "id": "p4q4",
           "question": "Quel est un signe qu'un texte pourrait être généré par IA ?",
           "options": [
-            "Il contient beaucoup de fautes",
             "Il est très court",
+            "Il contient beaucoup de fautes",
             "Les sources peuvent manquer ou être inventées",
             "Il est écrit en majuscules"
           ],
@@ -262,12 +262,12 @@
           "id": "p4q5",
           "question": "Que peut-on observer sur le texte présent dans les images générées par IA (panneaux, t-shirts, livres) ?",
           "options": [
-            "Il est toujours en anglais",
             "Il est souvent illisible ou incompréhensible",
+            "Il est toujours en italique",
             "Il est toujours parfaitement écrit",
-            "Il est toujours en italique"
+            "Il est toujours en anglais"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Le texte sur les panneaux, t-shirts ou livres dans les images IA est souvent illisible ou incompréhensible."
         }
       ]
@@ -281,8 +281,13 @@
         {
           "id": "gq1",
           "question": "En quelle année le terme « intelligence artificielle » a-t-il été proposé ?",
-          "options": ["1945", "1956", "1980", "2000"],
-          "correctIndex": 1,
+          "options": [
+            "2000",
+            "1980",
+            "1945",
+            "1956"
+          ],
+          "correctIndex": 3,
           "explanation": "Le terme « intelligence artificielle » a été proposé par John McCarthy en 1956.",
           "category": "partie1"
         },
@@ -290,12 +295,12 @@
           "id": "gq2",
           "question": "Qu'est-ce qu'une fake news ?",
           "options": [
-            "Une nouvelle très récente",
-            "Une information fausse ou truquée",
             "Une nouvelle internationale",
-            "Une nouvelle exclusive"
+            "Une nouvelle très récente",
+            "Une nouvelle exclusive",
+            "Une information fausse ou truquée"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Une fake news désigne des informations fausses, volontairement ou non truquées.",
           "category": "partie2"
         },
@@ -303,12 +308,12 @@
           "id": "gq3",
           "question": "Pourquoi l'IA peut-elle donner des réponses fausses ?",
           "options": [
+            "Parce qu'elle est mal programmée",
             "Parce qu'elle veut tromper les utilisateurs",
-            "Parce que son système ne récompense pas le fait de dire « je ne sais pas »",
             "Parce qu'elle n'a pas accès à Internet",
-            "Parce qu'elle est mal programmée"
+            "Parce que son système ne récompense pas le fait de dire « je ne sais pas »"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Le système d'apprentissage de l'IA valorise les réponses mais ne récompense pas l'aveu d'ignorance.",
           "category": "partie3"
         },
@@ -316,12 +321,12 @@
           "id": "gq4",
           "question": "Quel élément est souvent mal représenté dans les images générées par IA ?",
           "options": [
-            "Les paysages",
-            "Les mains et les doigts",
+            "Les formes géométriques",
             "Les couleurs",
-            "Les formes géométriques"
+            "Les mains et les doigts",
+            "Les paysages"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Les mains et les doigts sont souvent mal représentés : trop de doigts, doigts collés, etc.",
           "category": "partie4"
         },
@@ -329,10 +334,10 @@
           "id": "gq5",
           "question": "Quel événement a marqué le début du développement de l'IA ?",
           "options": [
-            "L'invention du téléphone",
+            "L'invention de l'électricité",
             "L'invention des ordinateurs programmables après la Seconde Guerre mondiale",
-            "La création d'Internet",
-            "L'invention de l'électricité"
+            "L'invention du téléphone",
+            "La création d'Internet"
           ],
           "correctIndex": 1,
           "explanation": "L'IA commence à se développer après la Seconde Guerre mondiale avec l'invention des ordinateurs programmables.",
@@ -343,11 +348,11 @@
           "question": "Quelle célèbre fake news impliquait le pape François ?",
           "options": [
             "Sa démission",
-            "Son soutien à Donald Trump",
             "Sa visite sur la Lune",
-            "Son mariage"
+            "Son mariage",
+            "Son soutien à Donald Trump"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Une des fake news les plus connues est le faux soutien du pape François à Donald Trump pendant sa candidature.",
           "category": "partie2"
         },
@@ -356,11 +361,11 @@
           "question": "Comment appelle-t-on une fausse information générée par un chatbot IA ?",
           "options": [
             "Un bug",
-            "Une hallucination",
+            "Un spam",
             "Un crash",
-            "Un spam"
+            "Une hallucination"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "On appelle cela une « hallucination » quand l'IA invente une information.",
           "category": "partie3"
         },
@@ -368,12 +373,12 @@
           "id": "gq8",
           "question": "Quel outil permet de vérifier l'origine d'une image ?",
           "options": [
+            "Google Drive",
             "Google Translate",
             "Google Lens",
-            "Google Drive",
             "Google Docs"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Google Lens permet de faire une recherche inversée pour voir si une image existe déjà ailleurs.",
           "category": "partie4"
         },
@@ -381,12 +386,12 @@
           "id": "gq9",
           "question": "Qu'est-ce que le machine learning ?",
           "options": [
-            "Un type d'ordinateur",
-            "Une méthode d'apprentissage automatique pour l'IA",
             "Un langage de programmation",
-            "Un réseau social"
+            "Un réseau social",
+            "Une méthode d'apprentissage automatique pour l'IA",
+            "Un type d'ordinateur"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Le machine learning (apprentissage automatique) est une méthode qui a permis à l'IA de progresser rapidement.",
           "category": "partie1"
         },
@@ -394,12 +399,12 @@
           "id": "gq10",
           "question": "Pourquoi les fake news se propagent-elles plus facilement aujourd'hui ?",
           "options": [
-            "À cause des journaux papier",
             "À cause de la puissance des réseaux sociaux",
+            "À cause de la télévision",
             "À cause de la radio",
-            "À cause de la télévision"
+            "À cause des journaux papier"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Les réseaux sociaux permettent à tout le monde de diffuser des informations sans obligation de vérification.",
           "category": "partie2"
         },
@@ -407,10 +412,10 @@
           "id": "gq11",
           "question": "Dans quels domaines l'IA fonctionne-t-elle particulièrement bien ?",
           "options": [
-            "Les domaines artistiques complexes",
+            "Les domaines spirituels",
             "Les domaines avec des règles claires comme l'orthographe",
-            "Les domaines philosophiques",
-            "Les domaines spirituels"
+            "Les domaines artistiques complexes",
+            "Les domaines philosophiques"
           ],
           "correctIndex": 1,
           "explanation": "L'IA fonctionne bien pour des domaines avec des règles claires, comme l'orthographe ou la grammaire.",
@@ -420,10 +425,10 @@
           "id": "gq12",
           "question": "Quel aspect des textes générés par IA peut sembler suspect ?",
           "options": [
-            "Ils contiennent beaucoup de fautes",
-            "Ils manquent de personnalité et les sources peuvent être inventées",
             "Ils sont toujours très courts",
-            "Ils sont écrits en plusieurs langues"
+            "Ils manquent de personnalité et les sources peuvent être inventées",
+            "Ils sont écrits en plusieurs langues",
+            "Ils contiennent beaucoup de fautes"
           ],
           "correctIndex": 1,
           "explanation": "Les textes IA peuvent manquer de personnalité et leurs sources peuvent manquer ou être inventées.",
@@ -433,10 +438,10 @@
           "id": "gq13",
           "question": "Qu'étaient les systèmes experts des années 1980 ?",
           "options": [
-            "Des robots humanoïdes",
+            "Des réseaux sociaux",
             "Des programmes imitant les décisions de spécialistes",
-            "Des jeux vidéo",
-            "Des réseaux sociaux"
+            "Des robots humanoïdes",
+            "Des jeux vidéo"
           ],
           "correctIndex": 1,
           "explanation": "Les systèmes experts étaient des programmes capables d'imiter les décisions de spécialistes dans des domaines précis.",
@@ -446,12 +451,12 @@
           "id": "gq14",
           "question": "Que recommande-t-on de faire avant de croire une information sur Internet ?",
           "options": [
-            "La partager immédiatement",
             "Vérifier ses sources",
-            "La supprimer",
-            "L'ignorer"
+            "La partager immédiatement",
+            "L'ignorer",
+            "La supprimer"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Pour être un citoyen libre et responsable, il faut apprendre à vérifier les sources des informations.",
           "category": "partie2"
         },
@@ -459,12 +464,12 @@
           "id": "gq15",
           "question": "Pourquoi compare-t-on le comportement de l'IA à celui d'un élève en examen ?",
           "options": [
-            "Parce que l'IA passe des examens",
             "Parce qu'elle préfère deviner plutôt que de laisser une réponse vide",
-            "Parce qu'elle copie sur les autres",
-            "Parce qu'elle révise beaucoup"
+            "Parce que l'IA passe des examens",
+            "Parce qu'elle révise beaucoup",
+            "Parce qu'elle copie sur les autres"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Comme un élève en QCM, l'IA préfère tenter une réponse plutôt que d'admettre ne pas savoir.",
           "category": "partie3"
         },
@@ -472,12 +477,12 @@
           "id": "gq16",
           "question": "Que peut-on remarquer sur les yeux, dents ou oreilles dans les images IA ?",
           "options": [
-            "Ils sont toujours parfaits",
-            "Ils peuvent être déformés ou asymétriques",
             "Ils sont absents",
-            "Ils sont toujours en couleur"
+            "Ils sont toujours parfaits",
+            "Ils sont toujours en couleur",
+            "Ils peuvent être déformés ou asymétriques"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Les yeux, les dents ou les oreilles peuvent être déformés ou asymétriques dans les images générées par IA.",
           "category": "partie4"
         },
@@ -485,12 +490,12 @@
           "id": "gq17",
           "question": "Quels facteurs ont accéléré les progrès de l'IA depuis 2010 ?",
           "options": [
-            "La baisse du prix des téléphones",
             "Plus de données, plus de puissance de calcul et le machine learning",
+            "La création de Facebook",
             "L'invention de nouveaux langages",
-            "La création de Facebook"
+            "La baisse du prix des téléphones"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "L'augmentation des données, la puissance de calcul et le machine learning ont accéléré les progrès de l'IA.",
           "category": "partie1"
         },
@@ -498,12 +503,12 @@
           "id": "gq18",
           "question": "Quel type de cours certains enseignants mettent-ils en place pour lutter contre les fake news ?",
           "options": [
+            "Des cours de musique",
             "Des cours de mathématiques",
             "Des cours d'éducation aux médias",
-            "Des cours de sport",
-            "Des cours de musique"
+            "Des cours de sport"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Des enseignants mettent en place des cours d'éducation aux médias pour développer l'esprit critique.",
           "category": "partie2"
         },
@@ -511,10 +516,10 @@
           "id": "gq19",
           "question": "ChatGPT est développé par quelle entreprise ?",
           "options": [
-            "Google",
+            "Apple",
             "OpenAI",
-            "Microsoft",
-            "Apple"
+            "Google",
+            "Microsoft"
           ],
           "correctIndex": 1,
           "explanation": "ChatGPT est développé par OpenAI, comme mentionné dans la documentation.",
@@ -524,12 +529,12 @@
           "id": "gq20",
           "question": "Si un texte semble parfait mais que les sources sont difficiles à trouver, que faut-il faire ?",
           "options": [
+            "Le considérer comme vrai",
             "Le partager quand même",
             "Rester prudent",
-            "Le considérer comme vrai",
             "Le traduire dans une autre langue"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Si un texte semble parfait mais qu'il est difficile de trouver d'où viennent les informations, il faut rester prudent.",
           "category": "partie4"
         }
