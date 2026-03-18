@@ -1,0 +1,76 @@
+{
+  "fake-ou-reel": [
+    {
+      "id": 1,
+      "type": "image",
+      "estFake": false,
+      "chemin": "../src/Jeux/Fake-Reel/f2deb353f7947ebba28f1458dc_reel.jpg"
+    },
+    {
+      "id": 2,
+      "type": "image",
+      "estFake": true,
+      "chemin": "../src/Jeux/Fake-Reel/f2deb353f7947ebba28f1458dc.jpg"
+    },
+    {
+      "id": 3,
+      "type": "image",
+      "estFake": true,
+      "chemin": "../src/Jeux/Fake-Reel/Image-1-1536x878.jpg"
+    },
+    {
+      "id": 4,
+      "type": "image",
+      "estFake": false,
+      "chemin": "../src/Jeux/Fake-Reel/Image-2-1536x878.jpg"
+    },
+    {
+      "id": 5,
+      "type": "image",
+      "estFake": false,
+      "chemin": "../src/Jeux/Fake-Reel/Image-5-scaled.jpg"
+    },
+    {
+      "id": 6,
+      "type": "image",
+      "estFake": true,
+      "chemin": "../src/Jeux/Fake-Reel/young-white-girl.webp"
+    },
+    {
+      "id": 7,
+      "type": "texte",
+      "estFake": false,
+      "texte": "Les pieuvres ont trois cœurs et leur sang est bleu à cause de la présence de cuivre dans l’hémocyanine, une protéine qui transporte l’oxygène."
+    },
+    {
+      "id": 8,
+      "type": "texte",
+      "estFake": true,
+      "texte": "Il existe une île au large de la Norvège où les chèvres sauvages ont développé la capacité de grimper sur des falaises presque verticales pour atteindre des lichens rares."
+    },
+    {
+      "id": 9,
+      "type": "texte",
+      "estFake": false,
+      "texte": "La planète Jupiter possède une immense tempête appelée la Grande Tache Rouge, qui fait environ deux fois la taille de la Terre et existe depuis au moins 400 ans."
+    },
+    {
+      "id": 10,
+      "type": "texte",
+      "estFake": true,
+      "texte": "Certaines exoplanètes gazeuses géantes pourraient posséder des “pluies de verre” horizontales, où des cristaux se forment et tombent latéralement à cause de vents supersoniques extrêmes."
+    },
+    {
+      "id": 11,
+      "type": "texte",
+      "estFake": false,
+      "texte": "Le lac Natron en Tanzanie peut atteindre des températures et une salinité si élevées que les animaux qui meurent dans ses eaux se fossiliseront presque instantanément, donnant l’impression de statues."
+    },
+    {
+      "id": 12,
+      "type": "texte",
+      "estFake": true,
+      "texte": "Dans certaines régions reculées de Sibérie, il pourrait exister des “forêts de glace” où de fines aiguilles de glace poussent verticalement sur le sol gelé, créant des formations qui ressemblent à de minuscules arbres gelés."
+    }
+  ]
+}
