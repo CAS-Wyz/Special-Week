@@ -56,7 +56,7 @@ function setStatus(text) {
 
 // --- Chargement JSON ---
 async function loadAffirmations() {
-  const url = './affirmations.json'; // adapte le chemin si besoin
+  const url = '../data/affirmations.json'; // adapte le chemin si besoin
   try {
     const res = await fetch(url, { cache: 'no-store' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);

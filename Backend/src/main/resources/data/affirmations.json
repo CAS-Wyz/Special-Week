@@ -209,6 +209,496 @@
       "estVrai": false,
       "explication": "Cette croyance vient d'une campagne de désinformation britannique pendant la Seconde Guerre mondiale pour cacher l'invention du radar.",
       "categorie": "histoire"
+    },
+    {
+      "id": 31,
+      "texte": "Les pieuvres ont trois cœurs.",
+      "estVrai": true,
+      "explication": "Les pieuvres possèdent effectivement trois cœurs : deux pompent le sang vers les branchies, et le troisième vers le reste du corps.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 32,
+      "texte": "L'ajout de sel dans l'eau la fait bouillir plus rapidement.",
+      "estVrai": false,
+      "explication": "Le sel augmente légèrement le point d'ébullition de l'eau, ce qui signifie qu'elle met en réalité un peu plus de temps à bouillir. L'effet est toutefois négligeable.",
+      "categorie": "science"
+    },
+    {
+      "id": 33,
+      "texte": "La Lune s'éloigne progressivement de la Terre chaque année.",
+      "estVrai": true,
+      "explication": "La Lune s'éloigne de la Terre d'environ 3,8 cm par an à cause des forces de marée. Dans des milliards d'années, les éclipses totales de Soleil ne seront plus possibles.",
+      "categorie": "science"
+    },
+    {
+      "id": 34,
+      "texte": "L'Antarctique est le plus grand désert du monde.",
+      "estVrai": true,
+      "explication": "Un désert se définit par ses faibles précipitations, pas par sa chaleur. L'Antarctique reçoit moins de 200 mm de précipitations par an et couvre 14 millions de km², bien plus que le Sahara.",
+      "categorie": "geographie"
+    },
+    {
+      "id": 35,
+      "texte": "Le verre est un liquide très visqueux qui s'écoule lentement sur des siècles.",
+      "estVrai": false,
+      "explication": "C'est un mythe. Le verre est un solide amorphe, pas un liquide lent. Les vitraux anciens plus épais en bas ont été fabriqués ainsi car la technique de l'époque produisait du verre inégal.",
+      "categorie": "science"
+    },
+    {
+      "id": 36,
+      "texte": "Les fourmis peuvent soulever jusqu'à 50 fois leur propre poids.",
+      "estVrai": true,
+      "explication": "Les fourmis sont parmi les animaux les plus forts au monde proportionnellement. Certaines espèces peuvent soulever jusqu'à 50 fois leur masse grâce à leurs muscles très efficaces.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 37,
+      "texte": "Les dauphins dorment avec un seul œil ouvert.",
+      "estVrai": true,
+      "explication": "Les dauphins pratiquent le sommeil unihémisphérique : une moitié de leur cerveau dort pendant que l'autre reste éveillée, leur permettant de continuer à nager et à respirer.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 38,
+      "texte": "Les flamants roses naissent avec des plumes roses.",
+      "estVrai": false,
+      "explication": "Les flamants roses naissent avec des plumes grises ou blanches. La couleur rose vient des pigments caroténoïdes présents dans leur alimentation (crevettes, algues).",
+      "categorie": "animaux"
+    },
+    {
+      "id": 39,
+      "texte": "Le cœur d'une crevette se trouve dans sa tête.",
+      "estVrai": true,
+      "explication": "Chez les crevettes et les crustacés en général, le cœur est situé dans le céphalothorax, la partie avant du corps qui correspond à la « tête » fusionnée avec le thorax.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 40,
+      "texte": "Le mont Everest est le point le plus éloigné du centre de la Terre.",
+      "estVrai": false,
+      "explication": "En raison du renflement équatorial, le volcan Chimborazo en Équateur est le point le plus éloigné du centre de la Terre, bien qu'il soit moins haut que l'Everest.",
+      "categorie": "geographie"
+    },
+    {
+      "id": 41,
+      "texte": "Les étoiles de mer ont un cerveau.",
+      "estVrai": false,
+      "explication": "Les étoiles de mer n'ont pas de cerveau. Elles possèdent un système nerveux simple sous forme d'anneau nerveux sans organe central. Chaque bras peut agir de façon relativement autonome.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 42,
+      "texte": "Les requins existent sur Terre depuis plus longtemps que les arbres.",
+      "estVrai": true,
+      "explication": "Les requins sont apparus il y a environ 450 millions d'années, alors que les premiers arbres sont apparus il y a environ 350 millions d'années. Les requins ont survécu à 5 extinctions de masse.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 43,
+      "texte": "Newton et Leibniz ont inventé le calcul infinitésimal de façon totalement indépendante.",
+      "estVrai": true,
+      "explication": "Newton et Leibniz ont développé le calcul différentiel et intégral séparément vers la même époque, ce qui a déclenché une célèbre querelle de priorité entre les mathématiciens européens.",
+      "categorie": "histoire"
+    },
+    {
+      "id": 44,
+      "texte": "Le premier virus informatique de l'histoire s'appelait 'Creeper'.",
+      "estVrai": true,
+      "explication": "Creeper est considéré comme le premier programme auto-réplicant (1971). Il affichait le message 'I'm the creeper, catch me if you can!' sur les écrans infectés du réseau ARPANET.",
+      "categorie": "technologie"
+    },
+    {
+      "id": 45,
+      "texte": "La France est le pays le plus visité au monde.",
+      "estVrai": true,
+      "explication": "La France est régulièrement classée première destination touristique mondiale avec environ 90 millions de visiteurs étrangers par an avant la pandémie de Covid-19.",
+      "categorie": "geographie"
+    },
+    {
+      "id": 46,
+      "texte": "Galilée a inventé le télescope.",
+      "estVrai": false,
+      "explication": "Le télescope a été inventé par l'opticien néerlandais Hans Lippershey en 1608. Galilée en a entendu parler et a construit et amélioré sa propre version qu'il a ensuite utilisée pour observer le ciel.",
+      "categorie": "histoire"
+    },
+    {
+      "id": 47,
+      "texte": "La baleine bleue est le plus grand animal ayant jamais existé sur Terre.",
+      "estVrai": true,
+      "explication": "La baleine bleue peut atteindre 30 mètres de long et peser jusqu'à 180 tonnes. Elle surpasse même les plus grands dinosaures connus, faisant d'elle le plus grand animal de tous les temps.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 48,
+      "texte": "Internet et le World Wide Web sont deux choses différentes.",
+      "estVrai": true,
+      "explication": "Internet est l'infrastructure réseau mondiale (câbles, routeurs, protocoles). Le Web est un service qui utilise Internet pour afficher des pages via des navigateurs. Il existe d'autres services sur Internet comme les emails ou le FTP.",
+      "categorie": "technologie"
+    },
+    {
+      "id": 49,
+      "texte": "Le Sahara est le plus grand désert du monde.",
+      "estVrai": false,
+      "explication": "Le Sahara est le plus grand désert chaud, mais l'Antarctique est le plus grand désert tout court. Un désert se définit par ses faibles précipitations, quelle que soit la température.",
+      "categorie": "geographie"
+    },
+    {
+      "id": 50,
+      "texte": "Les os humains sont plus solides que le béton à résistance égale.",
+      "estVrai": true,
+      "explication": "L'os cortical (compact) peut supporter jusqu'à 170 MPa en compression, contre environ 30 MPa pour le béton ordinaire. La structure naturelle de l'os en fait un matériau exceptionnel.",
+      "categorie": "science"
+    },
+    {
+      "id": 51,
+      "texte": "La tour de Pise a été intentionnellement construite penchée.",
+      "estVrai": false,
+      "explication": "Le penchement de la Tour de Pise est accidentel, dû à un sol trop mou d'un côté. La construction a commencé en 1173 et l'inclinaison a commencé dès les premières années.",
+      "categorie": "histoire"
+    },
+    {
+      "id": 52,
+      "texte": "Les pieuvres peuvent modifier la couleur et la texture de leur peau.",
+      "estVrai": true,
+      "explication": "Les pieuvres possèdent des chromatophores (cellules pigmentées) et des papilles musculaires qui leur permettent de changer instantanément couleur et texture pour se camoufler ou communiquer.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 53,
+      "texte": "L'Islande est plus verdoyante que le Groenland.",
+      "estVrai": true,
+      "explication": "C'est paradoxal, mais l'Islande est effectivement plus verte grâce à son volcanisme et son climat. Le Groenland est recouvert à 80% de glace. Ces noms ont été donnés pour tromper les colons potentiels.",
+      "categorie": "geographie"
+    },
+    {
+      "id": 54,
+      "texte": "Le premier satellite artificiel de l'histoire était soviétique.",
+      "estVrai": true,
+      "explication": "Spoutnik 1, lancé par l'URSS le 4 octobre 1957, fut le premier satellite artificiel à orbiter autour de la Terre, marquant le début de l'ère spatiale et lançant la course à l'espace.",
+      "categorie": "technologie"
+    },
+    {
+      "id": 55,
+      "texte": "Les tigres blancs sont une espèce à part entière.",
+      "estVrai": false,
+      "explication": "Les tigres blancs ne sont pas une espèce distincte mais des tigres du Bengale porteurs d'une mutation génétique rare qui donne leur couleur blanche. Quasiment tous ceux en captivité sont consanguins.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 56,
+      "texte": "Le Soleil représente plus de 99% de la masse totale du système solaire.",
+      "estVrai": true,
+      "explication": "Le Soleil contient environ 99,86% de toute la matière du système solaire. Jupiter, la plus grande planète, ne représente que 0,1% de la masse totale restante.",
+      "categorie": "science"
+    },
+    {
+      "id": 57,
+      "texte": "La Grande Muraille de Chine est un seul mur continu.",
+      "estVrai": false,
+      "explication": "La Grande Muraille est en réalité un ensemble de plusieurs murs construits par différentes dynasties sur des siècles. Elle comporte des sections discontinues, des doublons et de nombreuses lacunes.",
+      "categorie": "geographie"
+    },
+    {
+      "id": 58,
+      "texte": "Le Wi-Fi signifie 'Wireless Fidelity'.",
+      "estVrai": false,
+      "explication": "Contrairement à la croyance populaire, Wi-Fi ne signifie rien. C'est juste un nom de marque créé par une agence de marketing en 1999. Il ne s'agit pas d'un acronyme.",
+      "categorie": "technologie"
+    },
+    {
+      "id": 59,
+      "texte": "Les pieuvres ont du sang bleu.",
+      "estVrai": true,
+      "explication": "Le sang des pieuvres est bleu car il utilise l'hémocyanine (à base de cuivre) pour transporter l'oxygène, au lieu de l'hémoglobine (à base de fer) rouge que l'on trouve chez les humains.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 60,
+      "texte": "On peut faire cuire un œuf sur un trottoir par forte chaleur en été.",
+      "estVrai": false,
+      "explication": "Il faudrait une température d'environ 70°C pour cuire un œuf. Les trottoirs peuvent atteindre 50-60°C lors de fortes chaleurs, ce qui est insuffisant. L'expérience échoue dans la pratique.",
+      "categorie": "science"
+    },
+    {
+      "id": 61,
+      "texte": "Le cœur humain s'arrête de battre lorsque vous éternuez.",
+      "estVrai": false,
+      "explication": "L'éternuement modifie légèrement la pression thoracique, ce qui peut momentanément affecter le flux sanguin, mais le cœur ne s'arrête pas. C'est une légende populaire.",
+      "categorie": "science"
+    },
+    {
+      "id": 62,
+      "texte": "Les brocolis et le chou-fleur appartiennent à la même espèce botanique.",
+      "estVrai": true,
+      "explication": "Brocolis, chou-fleur, chou kale, chou de Bruxelles et chou pommé sont tous des variétés de la même espèce : Brassica oleracea, sélectionnées par l'homme au fil des siècles.",
+      "categorie": "nature"
+    },
+    {
+      "id": 63,
+      "texte": "L'ADN de tous les êtres humains est identique à 99,9%.",
+      "estVrai": true,
+      "explication": "Malgré nos différences apparentes, tous les humains partagent 99,9% de leur séquence ADN. Les 0,1% de variation représentent environ 3 millions de différences sur les 3 milliards de paires de bases.",
+      "categorie": "science"
+    },
+    {
+      "id": 64,
+      "texte": "Les girafes ne peuvent pas se coucher pour dormir.",
+      "estVrai": false,
+      "explication": "Les girafes peuvent tout à fait se coucher, bien qu'elles le fassent rarement par instinct de survie (se relever est long et les rend vulnérables). Elles dorment quelques minutes à la fois.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 65,
+      "texte": "L'espace entre les étoiles n'est pas un vide parfait.",
+      "estVrai": true,
+      "explication": "Le milieu interstellaire contient du gaz (principalement hydrogène et hélium), des poussières, des rayonnements et des champs magnétiques. La densité est extrêmement faible mais pas nulle.",
+      "categorie": "science"
+    },
+    {
+      "id": 66,
+      "texte": "Les chiens peuvent percevoir les couleurs.",
+      "estVrai": true,
+      "explication": "Contrairement à la croyance populaire, les chiens ne sont pas daltoniens. Ils voient en couleurs, mais avec un spectre plus limité que les humains : ils perçoivent surtout les bleus et les jaunes.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 67,
+      "texte": "La langue humaine possède des zones distinctes pour chaque saveur (sucré, salé, acide, amer).",
+      "estVrai": false,
+      "explication": "La 'carte des saveurs' de la langue est un mythe. Toutes les régions de la langue peuvent détecter les cinq saveurs de base : sucré, salé, acide, amer et umami.",
+      "categorie": "science"
+    },
+    {
+      "id": 68,
+      "texte": "Le Titanic emportait à son bord des jumelles qui auraient pu sauver le navire.",
+      "estVrai": true,
+      "explication": "Les jumelles du poste de vigie étaient enfermées dans un coffre dont le responsable avait le clé mais était descendu à Southampton. Sans jumelles, les guetteurs ont vu l'iceberg trop tard.",
+      "categorie": "histoire"
+    },
+    {
+      "id": 69,
+      "texte": "Les pingouins et les manchots sont le même animal.",
+      "estVrai": false,
+      "explication": "Ce sont deux groupes distincts. Les manchots vivent exclusivement dans l'hémisphère sud (Antarctique, Afrique du Sud...) et ne volent pas. Les pingouins vivaient dans l'Atlantique Nord et ont disparu au 19e siècle.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 70,
+      "texte": "Le premier être humain à avoir marché sur la Lune était américain.",
+      "estVrai": true,
+      "explication": "Neil Armstrong, astronaute américain, a posé le pied sur la Lune le 21 juillet 1969 lors de la mission Apollo 11, suivi de Buzz Aldrin. Michael Collins est resté en orbite.",
+      "categorie": "histoire"
+    },
+    {
+      "id": 71,
+      "texte": "Les empreintes digitales des koalas sont quasiment indiscernables de celles des humains.",
+      "estVrai": true,
+      "explication": "Les empreintes digitales des koalas sont si similaires à celles des humains qu'elles pourraient potentiellement contaminer une scène de crime. Cette ressemblance est due à une convergence évolutive.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 72,
+      "texte": "L'eau chaude gèle plus vite que l'eau froide dans certaines conditions.",
+      "estVrai": true,
+      "explication": "C'est l'effet Mpemba, démontré expérimentalement. Dans certaines conditions précises (contenant, composition de l'eau, congélateur...), l'eau chaude peut effectivement geler plus vite que l'eau froide.",
+      "categorie": "science"
+    },
+    {
+      "id": 73,
+      "texte": "Jules César est né par césarienne.",
+      "estVrai": false,
+      "explication": "La césarienne tire son nom de Jules César selon la légende, mais cela est quasi impossible car sa mère Aurélia a vécu longtemps après sa naissance, et la chirurgie était fatale pour les mères à l'époque.",
+      "categorie": "histoire"
+    },
+    {
+      "id": 74,
+      "texte": "Le premier programme informatique de l'histoire a été écrit par une femme.",
+      "estVrai": true,
+      "explication": "Ada Lovelace a écrit en 1843 le premier algorithme conçu pour être exécuté par une machine (la Machine analytique de Charles Babbage). Elle est considérée comme la première programmatrice de l'histoire.",
+      "categorie": "technologie"
+    },
+    {
+      "id": 75,
+      "texte": "La Russie est plus grande que la planète Pluton.",
+      "estVrai": true,
+      "explication": "La Russie couvre environ 17 millions de km². La surface totale de Pluton est d'environ 17,7 millions de km² avec un diamètre de 2 377 km. La Russie est donc presque aussi grande que Pluton.",
+      "categorie": "geographie"
+    },
+    {
+      "id": 76,
+      "texte": "Les humains sont les seuls animaux à rougir.",
+      "estVrai": true,
+      "explication": "Selon Charles Darwin, les humains sont les seuls animaux à rougir d'émotion (honte, gêne). Ce mécanisme involontaire est lié au système nerveux sympathique et serait unique à notre espèce.",
+      "categorie": "science"
+    },
+    {
+      "id": 77,
+      "texte": "Les méduses immortelles existent réellement.",
+      "estVrai": true,
+      "explication": "La méduse Turritopsis dohrnii peut revenir à son stade larvaire (polype) après avoir atteint la maturité sexuelle. Elle est théoriquement biologiquement immortelle, même si elle peut mourir de maladie ou prédation.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 78,
+      "texte": "La Chine n'a qu'un seul fuseau horaire officiel.",
+      "estVrai": true,
+      "explication": "Malgré son immensité (qui devrait couvrir 5 fuseaux horaires), la Chine n'utilise officiellement qu'un seul fuseau horaire, l'heure de Pékin (UTC+8), pour des raisons d'unité nationale.",
+      "categorie": "geographie"
+    },
+    {
+      "id": 79,
+      "texte": "Le papier a été inventé en Europe.",
+      "estVrai": false,
+      "explication": "Le papier a été inventé en Chine vers le 1er ou 2e siècle de notre ère. Il n'est arrivé en Europe que vers le 12e siècle, via le monde arabe.",
+      "categorie": "histoire"
+    },
+    {
+      "id": 80,
+      "texte": "Les chats ont ramené la peste noire en Europe au Moyen Âge.",
+      "estVrai": false,
+      "explication": "C'est le contraire : les chats ont été persécutés et exterminés comme 'animaux du diable', ce qui a favorisé la prolifération des rats porteurs des puces transmettant la peste.",
+      "categorie": "histoire"
+    },
+    {
+      "id": 81,
+      "texte": "Il y a plus de bactéries dans le corps humain que de cellules humaines.",
+      "estVrai": false,
+      "explication": "Une étude récente (2016) a réévalué ce chiffre. On estime désormais que le nombre de bactéries et de cellules humaines est à peu près égal, environ 37 000 milliards de chaque.",
+      "categorie": "science"
+    },
+    {
+      "id": 82,
+      "texte": "Le premier film de l'histoire a été réalisé par les frères Lumière.",
+      "estVrai": false,
+      "explication": "Thomas Edison et son assistant Dickson ont créé le Kinétoscope avant les Lumière. Cependant, la première projection publique payante devant un public a bien été organisée par les frères Lumière en 1895.",
+      "categorie": "histoire"
+    },
+    {
+      "id": 83,
+      "texte": "Les chats domestiques sont plus proches génétiquement du lion que du tigre.",
+      "estVrai": false,
+      "explication": "Les chats domestiques (Felis catus) appartiennent à la sous-famille des Félins. Les lions et tigres appartiennent tous deux à la sous-famille des Panthérins. Aucun n'est plus proche génétiquement du chat.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 84,
+      "texte": "L'oxygène que nous respirons provient majoritairement des océans.",
+      "estVrai": true,
+      "explication": "Environ 50 à 70% de l'oxygène atmosphérique est produit par le phytoplancton marin via la photosynthèse. Les forêts terrestres en produisent également, mais moins qu'on ne le croit souvent.",
+      "categorie": "nature"
+    },
+    {
+      "id": 85,
+      "texte": "Le premier appel téléphonique de l'histoire a dit 'Watson, venez ici, j'ai besoin de vous'.",
+      "estVrai": true,
+      "explication": "Le 10 mars 1876, Alexander Graham Bell a passé le premier appel téléphonique à son assistant Thomas Watson avec ces mots, testant le premier téléphone fonctionnel.",
+      "categorie": "histoire"
+    },
+    {
+      "id": 86,
+      "texte": "Les vers de terre ont cinq paires de cœurs.",
+      "estVrai": true,
+      "explication": "Les vers de terre possèdent 5 paires de 'pseudo-cœurs' (arcs aortiques) qui pompent le sang à travers leur système circulatoire. Ils n'ont pas de cœur centralisé comme les vertébrés.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 87,
+      "texte": "On peut allumer un feu dans l'espace.",
+      "estVrai": true,
+      "explication": "La combustion peut se produire dans l'espace tant qu'il y a un oxydant (comme l'oxygène). En apesanteur, les flammes prennent une forme sphérique bleutée, très différente des flammes terrestres.",
+      "categorie": "science"
+    },
+    {
+      "id": 88,
+      "texte": "La vitesse de la lumière est une constante absolue dans tous les milieux.",
+      "estVrai": false,
+      "explication": "La vitesse de la lumière est une constante (environ 300 000 km/s) uniquement dans le vide. Dans l'eau, le verre ou d'autres milieux, la lumière ralentit. C'est ce phénomène qui explique la réfraction.",
+      "categorie": "science"
+    },
+    {
+      "id": 89,
+      "texte": "L'être humain est le seul animal à cuisiner ses aliments.",
+      "estVrai": true,
+      "explication": "La cuisson des aliments est une caractéristique uniquement humaine. Cette capacité, apparue il y a environ 1 à 2 millions d'années, aurait joué un rôle clé dans l'évolution du cerveau humain.",
+      "categorie": "science"
+    },
+    {
+      "id": 90,
+      "texte": "Les éléphants se reconnaissent dans un miroir.",
+      "estVrai": true,
+      "explication": "Les éléphants font partie des rares animaux capables de se reconnaître dans un miroir (avec les grands singes, les dauphins et les corneilles). Cela indique une forme de conscience de soi.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 91,
+      "texte": "La Terre est parfaitement sphérique.",
+      "estVrai": false,
+      "explication": "La Terre est un géoïde légèrement aplati aux pôles et renflé à l'équateur en raison de sa rotation. Son diamètre équatorial (12 756 km) est plus grand que son diamètre polaire (12 714 km).",
+      "categorie": "science"
+    },
+    {
+      "id": 92,
+      "texte": "L'eau peut bouillir et geler en même temps.",
+      "estVrai": true,
+      "explication": "C'est le 'point triple' de l'eau : à une pression de 611,7 pascals et une température de 0,01°C, l'eau peut être simultanément solide, liquide et gazeuse. Ce phénomène est observable en laboratoire.",
+      "categorie": "science"
+    },
+    {
+      "id": 93,
+      "texte": "Les arbres communiquent entre eux via des réseaux de champignons souterrains.",
+      "estVrai": true,
+      "explication": "Le réseau mycorhizien, surnommé le 'Wood Wide Web', permet aux arbres d'échanger des nutriments, de l'eau et des signaux chimiques via des champignons filamenteux connectés à leurs racines.",
+      "categorie": "nature"
+    },
+    {
+      "id": 94,
+      "texte": "Le chocolat était autrefois utilisé comme monnaie.",
+      "estVrai": true,
+      "explication": "Les Mayas et les Aztèques utilisaient les fèves de cacao comme monnaie d'échange. Des textes historiques montrent qu'un esclave pouvait être acheté contre 100 fèves de cacao.",
+      "categorie": "histoire"
+    },
+    {
+      "id": 95,
+      "texte": "Les étoiles que nous voyons dans le ciel sont toutes encore vivantes.",
+      "estVrai": false,
+      "explication": "Certaines étoiles visibles à l'œil nu sont si lointaines que leur lumière a mis des milliers d'années à nous parvenir. Elles peuvent donc être mortes depuis longtemps. Nous les voyons telles qu'elles étaient dans le passé.",
+      "categorie": "science"
+    },
+    {
+      "id": 96,
+      "texte": "Le premier réseau social de l'histoire était Facebook.",
+      "estVrai": false,
+      "explication": "Facebook (2004) n'est pas le premier réseau social. SixDegrees (1997), Friendster (2002) et MySpace (2003) l'ont précédé. Six Degrees est souvent cité comme le premier réseau social moderne.",
+      "categorie": "technologie"
+    },
+    {
+      "id": 97,
+      "texte": "Les fourmis ne dorment jamais.",
+      "estVrai": false,
+      "explication": "Les fourmis dorment, mais de façon fragmentée. Les ouvrières font environ 250 micro-siestes de 1 minute par jour, soit environ 4h45 de sommeil quotidien. Les reines dorment beaucoup plus longtemps.",
+      "categorie": "animaux"
+    },
+    {
+      "id": 98,
+      "texte": "Le son voyage plus vite dans l'eau que dans l'air.",
+      "estVrai": true,
+      "explication": "Le son se propage à environ 343 m/s dans l'air mais à plus de 1 480 m/s dans l'eau. Les molécules d'eau étant plus proches, les vibrations se transmettent beaucoup plus rapidement.",
+      "categorie": "science"
+    },
+    {
+      "id": 99,
+      "texte": "Les arbres les plus vieux de la planète ont plus de 5 000 ans.",
+      "estVrai": true,
+      "explication": "Methuselah, un pin Bristlecone dans les montagnes Blanches de Californie, a environ 5 000 ans. C'est l'un des organismes vivants individuels les plus âgés jamais enregistrés.",
+      "categorie": "nature"
+    },
+    {
+      "id": 100,
+      "texte": "Une intelligence artificielle a déjà battu des champions du monde dans plusieurs jeux différents.",
+      "estVrai": true,
+      "explication": "L'IA a battu des champions mondiaux aux échecs (Deep Blue, 1997), au jeu de Go (AlphaGo, 2016), au poker (Libratus, 2017) et aux jeux vidéo comme StarCraft II (AlphaStar, 2019).",
+      "categorie": "technologie"
     }
   ]
 }
