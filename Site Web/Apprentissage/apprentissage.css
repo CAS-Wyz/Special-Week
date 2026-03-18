@@ -235,3 +235,79 @@ body {
   cursor: pointer;
   margin-top: 10px;
 }
+/* Zone qui contient le texte ou l'image à analyser */
+.challenge-box {
+  background-color: #1a0a24;
+  border: 2px dashed #b026ff; /* Bordure en pointillés pour l'effet "zone d'analyse" */
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.challenge-text {
+  color: #e0d4f5;
+  font-size: 1.1em;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Si tu mets une image dans la challenge-box */
+.challenge-box img {
+  max-width: 100%;
+  border-radius: 8px;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+/* Grille pour les 6 boutons */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes de même taille */
+  gap: 15px; /* Espace entre les boutons */
+}
+
+/* Boutons de réponse */
+.option-btn {
+  background-color: transparent;
+  border: 1px solid #5a2e7a;
+  color: #d1c4e9;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.option-btn:hover {
+  background-color: rgba(176, 38, 255, 0.1);
+  border-color: #b026ff;
+  transform: translateY(-2px);
+}
+
+/* Style quand un bouton est cliqué/sélectionné */
+.option-btn.selected {
+  background-color: #b026ff;
+  color: white;
+  border-color: #b026ff;
+  font-weight: bold;
+}
+
+/* Message de feedback */
+.feedback-success {
+  background-color: rgba(46, 204, 113, 0.2);
+  border: 1px solid #2ecc71;
+  color: #2ecc71;
+}
+
+.feedback-neutral {
+  background-color: rgba(176, 38, 255, 0.2);
+  border: 1px solid #b026ff;
+  color: #e0d4f5;
+}

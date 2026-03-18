@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake ou réel ?</title>
+      <link rel="stylesheet" href="apprentissage.css">
+
+</head>
+<body>
+    <main class="main-container">
+  
+  <a href="index.html" class="back-btn" style="display: inline-block; text-decoration: none; margin-bottom: 20px;">← Retour à l'accueil</a>
+
+  <h1 style="color: #e0d4f5; text-align: center; margin-bottom: 30px;">Jeu : Trouve l'incohérence !</h1>
+
+  <div class="challenge-box" id="content-area">
+    <p class="challenge-text">
+      "Le vieux loup de mer regarda l'horizon avec ses yeux bleus perçants. Il se souvint de sa jeunesse passée dans le désert aride, naviguant sur les dunes de sable avec son fidèle navire à voiles. Les vagues de l'océan s'écrasaient contre la coque de bois pendant qu'il ajustait son chapeau de cow-boy face à la tempête de neige."
+    </p>
+  </div>
+
+  <div class="options-grid">
+    <button class="option-btn" onclick="selectAnswer(this, 'Style très uniforme et fluide')">Style très uniforme et fluide</button>
+    <button class="option-btn" onclick="selectAnswer(this, 'Descriptions riches mais génériques')">Descriptions riches mais génériques</button>
+    <button class="option-btn" onclick="selectAnswer(this, 'Absence de vraie voix personnelle')">Absence de vraie voix personnelle</button>
+    <button class="option-btn" onclick="selectAnswer(this, 'Usage répétitif de certaines structures')">Usage répétitif de certaines structures</button>
+    <button class="option-btn" onclick="selectAnswer(this, 'Contradiction')">Contradiction</button>
+    <button class="option-btn" onclick="selectAnswer(this, 'Pas d\'incohérence')">Pas d'incohérence</button>
+  </div>
+
+  <div id="feedback-message" class="hidden" style="text-align: center; margin-top: 30px; padding: 15px; border-radius: 8px;">
+    </div>
+
+</main>
+
+  <script src="../header.js"></script>
+   <script src="quiz.js"></script>
+  <script src="../footer.js"></script>
+    
+</body>
+</html>
