@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
 
-cd /home/edouard/Documents/Cours B2/Spécial Week
 echo "🚀 Déploiement en cours..."
 
 echo "📦 Build des images Docker..."
