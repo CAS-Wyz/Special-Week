@@ -26,9 +26,11 @@ function resetScore() {
   localStorage.setItem('globalScore', 0);
   document.getElementById('global-score-number').innerText = 0;
 
-  const progression = JSON.parse(localStorage.getItem('progression')) || {};
-  progression.quiz = 'NOUVEAU';
-  localStorage.setItem('progression', JSON.stringify(progression));
+  localStorage.setItem('progression', JSON.stringify({
+    quiz: 'NOUVEAU',
+    incoherence: 'NIVEAU 1',
+    fakeOrReal: 'NOUVEAU'
+  }));
   chargerBadges();
 }
 
@@ -50,15 +52,16 @@ if (!localStorage.getItem('progression')) {
 function chargerBadges() {
     const data = JSON.parse(localStorage.getItem('progression'));
 
-    // Mise à jour du Quiz
-    const badgeQuiz = document.getElementById('badge-quiz');
-    badgeQuiz.innerText = data.quiz;
-    if(data.quiz === "TERMINÉ") badgeQuiz.classList.add('completed');
+    function setBadge(id, value) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.innerText = value;
+        el.classList.toggle('completed', value === 'TERMINÉ');
+    }
 
-    // Mise à jour de l'Incohérence
-    const badgeInc = document.getElementById('badge-incoherence');
-    badgeInc.innerText = data.incoherence;
-    // Si c'est un niveau numérique, tu peux ajouter une logique ici
+    setBadge('badge-quiz', data.quiz);
+    setBadge('badge-incoherence', data.incoherence);
+    setBadge('badge-fakeoureel', data.fakeOrReal || 'NOUVEAU');
 }
 
 // Lancer le chargement au démarrage

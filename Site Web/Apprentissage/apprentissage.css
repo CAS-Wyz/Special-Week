@@ -181,7 +181,7 @@ body {
   background: #1a0a24;
   border: 2px solid #3d1b54;
   border-radius: 20px;
-  padding: 20px;
+  padding: 40px 30px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
@@ -196,7 +196,8 @@ body {
 
 .choice-container {
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .choice-btn {
@@ -216,7 +217,7 @@ body {
 
 .choice-btn:hover { transform: scale(1.05); }
 
-#feedback.hidden { display: none; }
+.hidden { display: none !important; }
 
 #feedback {
   padding: 15px;
@@ -235,6 +236,48 @@ body {
   cursor: pointer;
   margin-top: 10px;
 }
+.end-screen {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #e0d4f5;
+}
+
+.end-screen h2 {
+  font-size: 1.8em;
+  margin-bottom: 1.5rem;
+  color: #b026ff;
+}
+
+.end-score {
+  font-size: 4em;
+  font-weight: bold;
+  color: white;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.end-score span {
+  font-size: 0.5em;
+  color: #a07abf;
+}
+
+.end-mention {
+  font-size: 1.2em;
+  margin-bottom: 2rem;
+  color: #c9a8f0;
+}
+
+#game-texte {
+  font-size: 1.15em;
+  line-height: 1.7;
+  color: #e0d4f5;
+  padding: 30px;
+  background: rgba(176, 38, 255, 0.08);
+  border-radius: 12px;
+  border: 1px solid #3d1b54;
+  margin-bottom: 10px;
+}
+
 /* Zone qui contient le texte ou l'image à analyser */
 .challenge-box {
   background-color: #1a0a24;
