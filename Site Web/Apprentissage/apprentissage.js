@@ -126,3 +126,29 @@ function finDeJeu() {
   // On met à jour le niveau dans la mémoire
   updateLevel('fakeOrReal', 'TERMINÉ');
 }
+
+
+  function selectAnswer(boutonClique, choix) {
+    // 1. On enlève la classe 'selected' de tous les boutons
+    let tousLesBoutons = document.querySelectorAll('.option-btn');
+    tousLesBoutons.forEach(btn => btn.classList.remove('selected'));
+
+    // 2. On ajoute la classe 'selected' au bouton cliqué
+    boutonClique.classList.add('selected');
+
+    // 3. On gère le message de retour (Feedback)
+    let feedbackDiv = document.getElementById('feedback-message');
+    feedbackDiv.classList.remove('hidden');
+    
+    // Exemple de logique simple (Tu pourras l'améliorer plus tard)
+    // Ici, la bonne réponse pour mon texte d'exemple est "Contradiction" (navire dans le désert)
+    let bonneReponse = "Contradiction";
+
+    if (choix === bonneReponse) {
+      feedbackDiv.className = "feedback-success"; // Classe CSS verte
+      feedbackDiv.innerHTML = "<strong>Bravo !</strong> C'est exactement ça. Il y a une contradiction évidente dans le texte.";
+    } else {
+      feedbackDiv.className = "feedback-neutral"; // Classe CSS violette
+      feedbackDiv.innerHTML = "Tu as sélectionné : <em>" + choix + "</em>. Es-tu sûr de ton choix ?";
+    }
+  }
