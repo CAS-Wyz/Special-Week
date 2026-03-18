@@ -1,0 +1,21 @@
+services:
+  backend:
+    build: ./Backend
+    environment:
+      - SCORES_PATH=/home/scores.json
+      - CORS_ALLOWED_ORIGINS=http://localhost,http://frontend
+    volumes:
+      - scores_data:/home
+    # Pas exposé directement — Nginx fait le proxy
+    expose:
+      - "8080"
+
+  frontend:
+    build: ./Site Web
+    ports:
+      - "8081:80"
+    depends_on:
+      - backend
+
+volumes:
+  scores_data:

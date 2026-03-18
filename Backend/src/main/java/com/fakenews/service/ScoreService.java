@@ -20,7 +20,7 @@ public class ScoreService {
 
     private List<Score> scores = new ArrayList<>();
     private final ObjectMapper objectMapper;
-    private final String SCORES_FILE = "scores.json";
+    private final String SCORES_FILE = System.getenv().getOrDefault("SCORES_PATH", "scores.json");
 
     public ScoreService() {
         this.objectMapper = new ObjectMapper();

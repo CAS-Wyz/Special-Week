@@ -18,12 +18,18 @@ public class CorsConfig {
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
-        
-        // Autorise ces origines (ajoute ton URL Azure plus tard)
-        config.addAllowedOrigin("http://localhost:5500");
-        config.addAllowedOrigin("http://127.0.0.1:5500");
-        config.addAllowedOrigin("http://localhost:3000");
-        // config.addAllowedOrigin("https://ton-site.azurewebsites.net");
+
+        // Origines par défaut (dev local)
+        String originesEnv = System.getenv("CORS_ALLOWED_ORIGINS");
+        if (originesEnv != null && !originesEnv.isBlank()) {
+            for (String origin : originesEnv.split(",")) {
+                config.addAllowedOrigin(origin.trim());
+            }
+        } else {
+            config.addAllowedOrigin("http://localhost:5500");
+            config.addAllowedOrigin("http://127.0.0.1:5500");
+            config.addAllowedOrigin("http://localhost:3000");
+        }
         
         // Autorise toutes les méthodes HTTP
         config.addAllowedMethod("*");
