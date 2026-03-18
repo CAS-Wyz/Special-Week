@@ -1,6 +1,7 @@
 /* Permet le scroll fluide pour les ancres (#) */
 html {
   scroll-behavior: smooth;
+  background-color: #1a0022;
 }
 
 body {
