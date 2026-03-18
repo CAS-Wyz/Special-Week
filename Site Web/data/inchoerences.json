@@ -1,0 +1,89 @@
+{
+  "incoherences": [
+    {
+      "id": 1,
+      "type": "image",
+      "chemin": "../src/Jeux/incoherences/image_accueil.png",
+      "options" : [
+        "Un autre bureau sans chaise",
+        "Symboles d'un MAC sur un PC",
+        "La touche rouge sur le clavier",
+        "Une souris sans ordinateur",
+        "Pas d'incoherences",
+        "Eclairage étrange"
+      ],
+      "correctIndex" : [0,1,3]
+    },
+    {
+        "id" : 2,
+        "type" : "image",
+        "chemin" : "../src/Jeux/incoherences/reconnaitre-image-ia.jpg",
+        "options" : [
+            "Pieds mal généré",
+            "Il manque des doigts",
+            "Drapeau Américain mal généré",
+            "Reflet du casque",
+            "Pas d'incoherences",
+            "Page du livre mal orientée"
+        ],
+        "correctIndex" : [1,2,5]
+    },
+    {
+        "id" : 3, 
+        "type" : "image",
+        "chemin" : "../src/Jeux/incoherences/ChatGPT Image 18 mars 2026, 11_56_16.png",
+        "options" : [
+            "Les jambes traversent la barrière",
+            "Les mains sont différentes",
+            "Une voiture est dans la foule", 
+            "Une feuille travers le sac",
+            "Les visages de la foule sont mal déssiné",
+            "Le feu de signalisation à 4 couleurs"
+
+        ],
+        "correctIndex" : [0,2,3,4]
+    },
+    {
+        "id" : 4, 
+        "type" : "image", 
+        "chemin" : "../src/Jeux/incoherences/manif.webp",
+        "options" : [
+            "Les doigts sont collés",
+            "Les têtes des policiers sont déformé",
+            "Le logo BOSS est asymétrique",
+            "Pas d'incoherences",
+            "Les mains tiennent mal l'appareil photo",
+            "Les pieds ne sont pas posés sur le sol"
+        ],
+        "correctIndex" : [3]
+    },
+    {
+        "id" : 5,
+        "type" : "texte",
+        "texte" : "Dans un village perché au sommet d’une colline, les maisons de pierre semblaient murmurer des histoires anciennes, même si personne ne les écoutait vraiment. Chaque matin, le chant des oiseaux se mêlait aux odeurs de pain chaud qui s’échappaient du four communal, bien que parfois personne ne se levât avant midi. Les enfants couraient entre les ruelles étroites, mais ils semblaient aussi traîner sans but. Les anciens racontaient, à l’ombre des tilleuls, des légendes oubliées que le vent s’empressait de répandre dans les champs alentour, et pourtant personne ne semblait se souvenir de ces histoires.",
+        "options" : [
+            "Pas d'incoherences",
+            "Contradiction après chaque MAIS",
+            "Neige en plein été",
+            "Absence de personnalité",
+            "Les oiseaux ne chantent pas",
+            "Le village est sur une ile"
+        ],
+        "correctIndex" : [1, 3]
+    },
+    {
+        "id" : 6, 
+        "type" : "texte",
+        "texte" : "L’été prochain, je suis allé passer quelques jours à la campagne. Chaque matin, je me levais tôt pour marcher le long des sentiers et profiter du calme et de la nature. Un après-midi, j’ai essayé de pêcher dans un petit ruisseau avec mon oncle : même si je n’ai attrapé qu’un poisson minuscule, j’ai beaucoup ri. Le soir, je suis retourné à la mer pour regarder le coucher du soleil. Un matin, j’ai pris mon manteau d’hiver car il faisait très froid, alors que le soleil brillait déjà. Ces quelques jours m’ont permis de me détendre et de savourer la simplicité de la vie loin de la ville.",
+        "options" : [
+            "Lieux incohérent (campagne puis mer)",
+            "Prend un manteau alors qu'il fait beau",
+            "Le soleil est bleu", 
+            "Parle au passer d'un été prochain",
+            "Pêche avec un baton", 
+            "Pas d'incoherences" 
+        ],
+        "correctIndex" : [0, 1, 3]
+    }
+  ]
+}
