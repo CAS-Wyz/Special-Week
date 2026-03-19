@@ -1,7 +1,18 @@
+const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+  ? 'http://localhost:8080'
+  : '';
+
+// Valide que le chemin d'image pointe vers les ressources locales connues
+function isSafeImagePath(path) {
+  return typeof path === 'string' &&
+    /^\.\.\/src\//.test(path) &&
+    !/[<>"'&]/.test(path);
+}
+
 let questions = [];
 let currentIndex = 0;
 let score = 0; // Compteur des incohérences trouvées (pour l'écran de fin)
-let totalIncoherencesPossibles = 0; 
+let totalIncoherencesPossibles = 0;
 let userSelections = []; 
 
 // 1. Récupération des données depuis le JSON
@@ -43,12 +54,12 @@ function renderQuestion() {
   if (q.type === 'image') {
     const img = document.createElement('img');
     img.alt = 'À analyser';
-    img.src = q.chemin;
-    img.className = "clickable-image"; // Pour le style CSS
+    img.src = isSafeImagePath(q.chemin) ? q.chemin : '';
+    img.className = "clickable-image";
     img.style.maxHeight = '300px';
     img.style.borderRadius = '8px';
     img.style.cursor = 'zoom-in';
-    img.onclick = () => openModal(q.chemin); // Ouvre le zoom
+    img.onclick = () => { if (isSafeImagePath(q.chemin)) openModal(q.chemin); };
     imageDisplay.appendChild(img);
   } 
   // Type TEXTE
@@ -100,6 +111,17 @@ function checkAnswer() {
       bonnesReponsesTrouvees++;
     } else {
       mauvaisesReponsesChoisies++;
+    }
+  });
+
+  // Incohérences manquées (non détectées)
+  q.correctIndex.forEach(i => {
+    if (!userSelections.includes(i)) {
+      fetch(API_BASE + '/api/stats/error', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ module: 'incoherence', label: q.options[i] })
+      }).catch(() => {});
     }
   });
 
@@ -192,7 +214,7 @@ function showEndScreen() {
     fetch(API_BASE + '/api/scores', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ pseudo, quizId: 'incoherence', score, totalQuestions: 6 })
+      body: JSON.stringify({ pseudo, quizId: 'incoherence', score, totalQuestions: totalIncoherencesPossibles })
     }).catch(() => {});
   }
 }

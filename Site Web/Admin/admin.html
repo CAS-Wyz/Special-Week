@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin — Clairvo'lAnce</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="icon" type="image/png" href="../src/Logo Special Week.png">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- ── En-tête admin ──────────────────────────────────────────────────── -->
+  <header class="admin-header">
+    <a class="admin-logo" href="../Accueil/accueil.html">
+      <img src="../src/Logo.png" alt="Logo" class="admin-logo-img">
+      <span>Clairvo'lAnce</span>
+    </a>
+    <span class="admin-badge">Dashboard Admin</span>
+  </header>
+
+  <!-- ── Formulaire de connexion ────────────────────────────────────────── -->
+  <div id="login-screen" class="login-screen">
+    <div class="login-card">
+      <h1 class="login-title">Accès admin</h1>
+      <p class="login-sub">Entrez la clé administrateur pour accéder au dashboard.</p>
+      <input
+        type="password"
+        id="admin-key-input"
+        class="login-input"
+        placeholder="Clé admin"
+        autocomplete="off"
+      >
+      <p id="login-error" class="login-error"></p>
+      <button id="login-btn" class="login-btn">Accéder</button>
+    </div>
+  </div>
+
+  <!-- ── Dashboard ──────────────────────────────────────────────────────── -->
+  <main id="dashboard" class="dashboard" style="display:none">
+
+    <!-- KPIs -->
+    <section class="kpi-row">
+      <div class="kpi-card">
+        <div class="kpi-dot"></div>
+        <div class="kpi-value" id="kpi-online">—</div>
+        <div class="kpi-label">En ligne maintenant</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">👥</div>
+        <div class="kpi-value" id="kpi-today">—</div>
+        <div class="kpi-label">Visiteurs aujourd'hui</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">🏆</div>
+        <div class="kpi-value" id="kpi-total">—</div>
+        <div class="kpi-label">Joueurs total</div>
+      </div>
+    </section>
+
+    <!-- Joueurs en ligne -->
+    <section class="dash-section">
+      <p class="dash-section-title">Joueurs en ligne</p>
+      <div id="online-chips" class="online-chips">
+        <span class="dash-empty">Chargement...</span>
+      </div>
+    </section>
+
+    <!-- Score des quizz -->
+    <section class="dash-section">
+      <p class="dash-section-title">Score des quizz</p>
+      <div class="scores-layout">
+        <div class="chart-wrap chart-wrap--bar">
+          <canvas id="scores-chart"></canvas>
+        </div>
+        <div id="scores-table" class="scores-table"></div>
+      </div>
+    </section>
+
+    <!-- Indices visualisés (distribution par module) -->
+    <section class="dash-section">
+      <p class="dash-section-title">Indices visualisés — distribution des scores</p>
+      <div class="dist-grid" id="dist-grid">
+        <span class="dash-empty">Chargement...</span>
+      </div>
+    </section>
+
+    <!-- Types d'erreurs courantes -->
+    <section class="dash-section">
+      <p class="dash-section-title">Types d'erreurs courantes détectées</p>
+      <div class="errors-grid" id="errors-grid">
+        <span class="dash-empty">Chargement...</span>
+      </div>
+    </section>
+
+    <!-- Progression -->
+    <section class="dash-section">
+      <p class="dash-section-title">Progression — modules complétés par joueur</p>
+      <div class="progression-layout">
+        <div class="chart-wrap chart-wrap--doughnut">
+          <canvas id="progression-chart"></canvas>
+        </div>
+        <div id="progression-legend" class="progression-legend"></div>
+      </div>
+    </section>
+
+    <!-- Refresh -->
+    <p class="refresh-info">
+      Actualisation automatique toutes les 30 s — dernière mise à jour : <span id="last-refresh">—</span>
+    </p>
+
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

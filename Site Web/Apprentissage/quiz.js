@@ -74,6 +74,14 @@ function answerQuestion(selectedIndex) {
     buttons[q.correctIndex].classList.add('correct');
   }
 
+  if (!isCorrect) {
+    fetch(API_BASE + '/api/stats/error', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ module: 'general', label: q.question.substring(0, 80) })
+    }).catch(() => {});
+  }
+
   document.getElementById('q-score').textContent = (score * 10) + ' pts';
 
   const explanation = document.getElementById('q-explanation');

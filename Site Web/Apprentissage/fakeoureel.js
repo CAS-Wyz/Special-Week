@@ -2,6 +2,13 @@ const API_BASE = (window.location.hostname === 'localhost' || window.location.ho
   ? 'http://localhost:8080'
   : '';
 
+// Valide que le chemin d'image pointe vers les ressources locales connues
+function isSafeImagePath(path) {
+  return typeof path === 'string' &&
+    /^\.\.\/src\//.test(path) &&
+    !/[<>"'&]/.test(path);
+}
+
 let questions = [];
 let currentIndex = 0;
 let score = 0;
@@ -36,12 +43,10 @@ function renderQuestion() {
   if (q.type === 'image') {
     const img = document.createElement('img');
     img.alt = 'À analyser';
-    img.src = q.chemin;
-    
-    // NOUVEAU : On ajoute les propriétés pour le zoom
+    img.src = isSafeImagePath(q.chemin) ? q.chemin : '';
     img.className = "clickable-image";
     img.style.cursor = 'zoom-in';
-    img.onclick = () => openModal(q.chemin);
+    img.onclick = () => { if (isSafeImagePath(q.chemin)) openModal(q.chemin); };
     
     imageDisplay.appendChild(img);
   } else if (q.type === 'texte') {
@@ -60,6 +65,17 @@ function checkAnswer(userClickedReel) {
     score++;
     const globalScore = parseInt(localStorage.getItem('globalScore')) || 0;
     localStorage.setItem('globalScore', globalScore + 10);
+  }
+
+  if (!correct) {
+    const label = q.type === 'image'
+      ? 'Image : ' + q.chemin.split('/').pop().replace(/\.[^.]+$/, '').substring(0, 50)
+      : 'Texte : ' + (q.texte || '').substring(0, 50);
+    fetch(API_BASE + '/api/stats/error', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ module: 'fakeoureel', label })
+    }).catch(() => {});
   }
 
   document.getElementById('choices').classList.add('hidden');

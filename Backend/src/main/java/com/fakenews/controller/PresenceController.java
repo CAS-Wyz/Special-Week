@@ -3,6 +3,8 @@ package com.fakenews.controller;
 import com.fakenews.service.PresenceService;
 import com.fakenews.service.RateLimiterService;
 import jakarta.servlet.http.HttpServletRequest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +15,8 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/presence")
 public class PresenceController {
+
+    private static final Logger log = LoggerFactory.getLogger(PresenceController.class);
 
     @Autowired
     private PresenceService presenceService;
@@ -31,6 +35,7 @@ public class PresenceController {
 
         // Rate limiting : max 5 pings par IP par minute
         if (!rateLimiter.isAllowed("ping:" + ip, 5, 60 * 1000)) {
+            log.warn("Rate limit ping dépassé pour {}", ip);
             return ResponseEntity.status(429).body(Map.of("erreur", "Trop de requêtes."));
         }
 

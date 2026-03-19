@@ -1,0 +1,433 @@
+/* ═══════════════════════════════════════════════════════
+   Dashboard Admin — Clairvo'lAnce
+   ═══════════════════════════════════════════════════════ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: #0d0015;
+  color: #e0d4f5;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* ── En-tête ─────────────────────────────────────────── */
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  height: 60px;
+  background: #12001f;
+  border-bottom: 1px solid #2a1040;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.admin-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #e0d4f5;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.admin-logo-img {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+}
+
+.admin-badge {
+  background: rgba(176, 38, 255, 0.18);
+  border: 1px solid #5a2e7a;
+  color: #c9b8e8;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 50px;
+}
+
+/* ── Écran de connexion ──────────────────────────────── */
+
+.login-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 60px);
+  padding: 24px;
+}
+
+.login-card {
+  background: #1a0a24;
+  border: 1px solid #3d1b54;
+  border-radius: 16px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-title {
+  font-size: 1.4rem;
+  color: #e0d4f5;
+  margin-bottom: 10px;
+}
+
+.login-sub {
+  font-size: 0.88rem;
+  color: #8b7a9f;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+.login-input {
+  width: 100%;
+  background: #0d0015;
+  border: 1px solid #3d1b54;
+  border-radius: 10px;
+  padding: 12px 16px;
+  color: #e0d4f5;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+  margin-bottom: 10px;
+}
+
+.login-input:focus { border-color: #b026ff; }
+
+.login-error {
+  font-size: 0.82rem;
+  color: #ff4d7a;
+  min-height: 18px;
+  margin-bottom: 12px;
+}
+
+.login-btn {
+  width: 100%;
+  background: #b026ff;
+  border: none;
+  border-radius: 10px;
+  padding: 13px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.login-btn:hover:not(:disabled) { background: #9400d3; }
+.login-btn:disabled { opacity: 0.5; cursor: default; }
+
+/* ── Dashboard ───────────────────────────────────────── */
+
+.dashboard {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 36px 24px 80px;
+}
+
+/* ── KPIs ────────────────────────────────────────────── */
+
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.kpi-card {
+  background: #1a0a24;
+  border: 1px solid #3d1b54;
+  border-radius: 14px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.kpi-dot {
+  width: 12px;
+  height: 12px;
+  background: #00c864;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+.kpi-icon { font-size: 1.4rem; line-height: 1; }
+
+.kpi-value {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #b026ff;
+  line-height: 1;
+}
+
+.kpi-label {
+  font-size: 0.8rem;
+  color: #8b7a9f;
+  letter-spacing: 0.5px;
+}
+
+/* ── Sections ────────────────────────────────────────── */
+
+.dash-section {
+  background: #1a0a24;
+  border: 1px solid #3d1b54;
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.dash-section-title {
+  color: #b026ff;
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.dash-empty {
+  color: #5a2e7a;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* ── Joueurs en ligne ────────────────────────────────── */
+
+.online-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.player-chip {
+  background: rgba(176, 38, 255, 0.12);
+  border: 1px solid #5a2e7a;
+  color: #c9b8e8;
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: 0.88rem;
+}
+
+/* ── Score des quizz ─────────────────────────────────── */
+
+.scores-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.chart-wrap--bar {
+  height: 220px;
+  position: relative;
+}
+
+.score-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #2a1040;
+  gap: 12px;
+}
+
+.score-row:last-child { border-bottom: none; }
+
+.score-row-label {
+  font-size: 0.88rem;
+  color: #c9b8e8;
+  font-weight: 500;
+  flex: 1;
+}
+
+.score-row-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.score-row-players {
+  font-size: 0.78rem;
+  color: #5a2e7a;
+}
+
+.score-row-pct {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #b026ff;
+  width: 42px;
+  text-align: right;
+}
+
+.score-mini-bar {
+  width: 80px;
+  height: 5px;
+  background: #2a1040;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.score-mini-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6b00c4, #b026ff);
+  border-radius: 50px;
+}
+
+/* ── Indices visualisés (distribution doughnuts) ─────── */
+
+.dist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.dist-card {
+  background: #0d0015;
+  border: 1px solid #2a1040;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.dist-card-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #c9b8e8;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.dist-canvas-wrap {
+  height: 160px;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.dist-chart-legend { display: flex; flex-direction: column; gap: 6px; }
+
+.dist-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: #8b7a9f;
+}
+
+.dist-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dist-legend-count {
+  margin-left: auto;
+  color: #c9b8e8;
+  font-weight: 600;
+}
+
+/* ── Erreurs courantes ───────────────────────────────── */
+
+.errors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.error-card {
+  background: #0d0015;
+  border: 1px solid #2a1040;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.error-card-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #c9b8e8;
+  margin-bottom: 16px;
+}
+
+.error-canvas-wrap {
+  height: 200px;
+  position: relative;
+}
+
+/* ── Progression ─────────────────────────────────────── */
+
+.progression-layout {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.chart-wrap--doughnut {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.progression-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.prog-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.prog-legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.prog-legend-label {
+  font-size: 0.9rem;
+  color: #e0d4f5;
+  font-weight: 500;
+}
+
+.prog-legend-count {
+  font-size: 0.8rem;
+  color: #8b7a9f;
+  margin-top: 2px;
+}
+
+/* ── Refresh ─────────────────────────────────────────── */
+
+.refresh-info {
+  text-align: center;
+  font-size: 0.78rem;
+  color: #5a2e7a;
+  margin-top: 8px;
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+
+@media (max-width: 680px) {
+  .scores-layout { grid-template-columns: 1fr; }
+  .chart-wrap--bar { height: 180px; }
+  .admin-header { padding: 0 16px; }
+  .dashboard { padding: 20px 14px 60px; }
+  .kpi-value { font-size: 2rem; }
+  .login-card { padding: 28px 20px; }
+  .progression-layout { justify-content: center; }
+}

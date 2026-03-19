@@ -1,5 +1,7 @@
 (function () {
-  const PSEUDO_REGEX = /^[^\x00-\x1f\x7f]{2,20}$/;
+  // Bloque les caractères de contrôle et les caractères HTML dangereux (<>"&)
+  // mais autorise les espaces, accents, emoji et autres caractères spéciaux
+  const PSEUDO_REGEX = /^[^\x00-\x1f\x7f<>"&]{2,20}$/;
   const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
     ? 'http://localhost:8080'
     : '';

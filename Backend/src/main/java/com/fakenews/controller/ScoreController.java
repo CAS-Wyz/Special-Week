@@ -4,6 +4,8 @@ import com.fakenews.model.Score;
 import com.fakenews.service.RateLimiterService;
 import com.fakenews.service.ScoreService;
 import jakarta.servlet.http.HttpServletRequest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -25,6 +27,7 @@ import java.util.Set;
 @RequestMapping("/api/scores")
 public class ScoreController {
 
+    private static final Logger log = LoggerFactory.getLogger(ScoreController.class);
     private static final Set<String> QUIZ_IDS_VALIDES = Set.of("general", "fakeoureel", "incoherence");
 
     @Autowired
@@ -87,24 +90,29 @@ public class ScoreController {
 
         // Rate limiting : max 10 soumissions par IP par 5 minutes
         if (!rateLimiter.isAllowed("score:" + ip, 10, 5 * 60 * 1000)) {
+            log.warn("Rate limit score dépassé pour {}", ip);
             return ResponseEntity.status(429).body(Map.of("erreur", "Trop de soumissions. Réessaie dans quelques minutes."));
         }
 
         // Validation du pseudo
         if (score.getPseudo() == null || score.getPseudo().isBlank() || score.getPseudo().length() > 20) {
+            log.warn("Score refusé - pseudo invalide depuis {}", ip);
             return ResponseEntity.badRequest().body(Map.of("erreur", "Pseudo invalide."));
         }
 
         // Validation du quizId
         if (!QUIZ_IDS_VALIDES.contains(score.getQuizId())) {
+            log.warn("Score refusé - quizId inconnu '{}' depuis {}", score.getQuizId(), ip);
             return ResponseEntity.badRequest().body(Map.of("erreur", "Quiz inconnu."));
         }
 
         // Validation des valeurs numériques
         if (score.getTotalQuestions() <= 0 || score.getTotalQuestions() > 100) {
+            log.warn("Score refusé - totalQuestions invalide ({}) depuis {}", score.getTotalQuestions(), ip);
             return ResponseEntity.badRequest().body(Map.of("erreur", "Nombre de questions invalide."));
         }
         if (score.getScore() < 0 || score.getScore() > score.getTotalQuestions()) {
+            log.warn("Score refusé - valeur invalide ({}/{}) depuis {}", score.getScore(), score.getTotalQuestions(), ip);
             return ResponseEntity.badRequest().body(Map.of("erreur", "Score invalide."));
         }
 

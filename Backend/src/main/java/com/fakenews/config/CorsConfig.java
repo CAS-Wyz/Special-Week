@@ -1,5 +1,7 @@
 package com.fakenews.config;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
@@ -15,6 +17,8 @@ import org.springframework.web.filter.CorsFilter;
 @Configuration
 public class CorsConfig {
 
+    private static final Logger log = LoggerFactory.getLogger(CorsConfig.class);
+
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
@@ -26,6 +30,7 @@ public class CorsConfig {
                 config.addAllowedOrigin(origin.trim());
             }
         } else {
+            log.warn("CORS_ALLOWED_ORIGINS non défini — origines localhost utilisées par défaut. Configurez cette variable en production !");
             config.addAllowedOrigin("http://localhost:5500");
             config.addAllowedOrigin("http://127.0.0.1:5500");
             config.addAllowedOrigin("http://localhost:3000");
