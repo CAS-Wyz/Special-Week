@@ -42,7 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
 if (!localStorage.getItem('progression')) {
     const debutProgression = {
         quiz: "NOUVEAU",
-        incoherence: "NIVEAU 1",
+        incoherence: "NOUVEAU",
         fakeOrReal: "NOUVEAU"
     };
     localStorage.setItem('progression', JSON.stringify(debutProgression));
