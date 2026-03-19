@@ -53,6 +53,14 @@
     errorEl.textContent = '';
     sessionStorage.setItem('pseudo', pseudo);
 
+    // Réinitialise la progression et le score pour cette nouvelle session
+    localStorage.setItem('globalScore', 0);
+    localStorage.setItem('progression', JSON.stringify({
+      quiz: 'NOUVEAU',
+      incoherence: 'NOUVEAU',
+      fakeOrReal: 'NOUVEAU'
+    }));
+
     const overlay = document.getElementById('pseudo-overlay');
     if (overlay) overlay.remove();
 
