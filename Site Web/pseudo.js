@@ -56,6 +56,7 @@
     const overlay = document.getElementById('pseudo-overlay');
     if (overlay) overlay.remove();
 
+    window.scrollTo({ top: 0, behavior: 'instant' });
     startHeartbeat();
   }
 
