@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 @Service
 public class PresenceService {
 
-    private static final Pattern PSEUDO_PATTERN = Pattern.compile("^[a-zA-Z0-9_-]{2,20}$");
+    private static final Pattern PSEUDO_PATTERN = Pattern.compile("^[^\\x00-\\x1f\\x7f]{2,20}$");
     private static final int TIMEOUT_SECONDS = 60;
 
     private final Map<String, LocalDateTime> presenceMap = new ConcurrentHashMap<>();

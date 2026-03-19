@@ -46,7 +46,7 @@
 <header id="site-header">
   <div class="header-inner">
     <a class="header-logo" href="${base}Accueil/accueil.html">
-      <img class="header-logo-img" src="${base}src/Logo Special Week.png" alt="Logo Clairvo'lAnce">
+      <img class="header-logo-img" src="${base}src/Logo.png" alt="Logo Clairvo'lAnce">
       <span class="header-logo-text">Clairvo'lAnce</span>
     </a>
 

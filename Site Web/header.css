@@ -203,6 +203,7 @@
     gap: 16px;
     width: 100%;
     padding: 16px 4px 6px;
+    order: 10;
   }
 
   .header-nav.open {
@@ -211,5 +212,9 @@
 
   .header-nav a {
     font-size: 1rem;
+  }
+
+  .header-qr-btn {
+    order: 1;
   }
 }

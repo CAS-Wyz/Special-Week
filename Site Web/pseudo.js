@@ -1,5 +1,5 @@
 (function () {
-  const PSEUDO_REGEX = /^[a-zA-Z0-9_-]{2,20}$/;
+  const PSEUDO_REGEX = /^[^\x00-\x1f\x7f]{2,20}$/;
   const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
     ? 'http://localhost:8080'
     : '';
@@ -45,7 +45,7 @@
     const errorEl = document.getElementById('pseudo-error');
 
     if (!PSEUDO_REGEX.test(pseudo)) {
-      errorEl.textContent = '2 à 20 caractères : lettres, chiffres, _ ou - uniquement.';
+      errorEl.textContent = '2 à 20 caractères (espaces et caractères spéciaux autorisés).';
       input.focus();
       return;
     }
