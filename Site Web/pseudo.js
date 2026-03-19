@@ -51,7 +51,7 @@
     }
 
     errorEl.textContent = '';
-    localStorage.setItem('pseudo', pseudo);
+    sessionStorage.setItem('pseudo', pseudo);
 
     const overlay = document.getElementById('pseudo-overlay');
     if (overlay) overlay.remove();
@@ -62,7 +62,7 @@
 
   // ── Heartbeat ────────────────────────────────────────────
   function ping() {
-    const pseudo = localStorage.getItem('pseudo');
+    const pseudo = sessionStorage.getItem('pseudo');
     if (!pseudo) return;
     fetch(API_BASE + '/api/presence/ping', {
       method: 'POST',
@@ -76,9 +76,19 @@
     setInterval(ping, 30000);
   }
 
+  // ── Départ : retire la présence immédiatement ─────────────
+  window.addEventListener('beforeunload', () => {
+    const pseudo = sessionStorage.getItem('pseudo');
+    if (!pseudo) return;
+    navigator.sendBeacon(
+      API_BASE + '/api/presence/leave',
+      new Blob([JSON.stringify({ pseudo })], { type: 'application/json' })
+    );
+  });
+
   // ── Init ─────────────────────────────────────────────────
   document.addEventListener('DOMContentLoaded', () => {
-    if (!localStorage.getItem('pseudo')) {
+    if (!sessionStorage.getItem('pseudo')) {
       showModal();
     } else {
       startHeartbeat();

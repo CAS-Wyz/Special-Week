@@ -94,7 +94,7 @@ function showEndScreen() {
     </div>`;
 
   // Sauvegarde du score sur le backend
-  const pseudo = localStorage.getItem('pseudo');
+  const pseudo = sessionStorage.getItem('pseudo');
   if (pseudo) {
     fetch(API_BASE + '/api/scores', {
       method: 'POST',

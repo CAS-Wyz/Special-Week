@@ -30,6 +30,10 @@ public class PresenceService {
         return new ArrayList<>(presenceMap.keySet());
     }
 
+    public void removePlayer(String pseudo) {
+        presenceMap.remove(pseudo);
+    }
+
     private void cleanupInactive() {
         LocalDateTime cutoff = LocalDateTime.now().minusSeconds(TIMEOUT_SECONDS);
         presenceMap.entrySet().removeIf(entry -> entry.getValue().isBefore(cutoff));

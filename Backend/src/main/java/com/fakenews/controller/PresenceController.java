@@ -39,4 +39,16 @@ public class PresenceController {
     public ResponseEntity<List<String>> getOnline() {
         return ResponseEntity.ok(presenceService.getOnlinePlayers());
     }
+
+    /**
+     * POST /api/presence/leave
+     * Body : { "pseudo": "Alice" }
+     * Retire immédiatement le joueur de la présence.
+     */
+    @PostMapping("/leave")
+    public ResponseEntity<?> leave(@RequestBody Map<String, String> body) {
+        String pseudo = body.get("pseudo");
+        if (pseudo != null) presenceService.removePlayer(pseudo);
+        return ResponseEntity.ok(Map.of("status", "ok"));
+    }
 }

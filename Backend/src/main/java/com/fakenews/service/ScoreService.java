@@ -18,6 +18,9 @@ import java.util.stream.Collectors;
 @Service
 public class ScoreService {
 
+    @org.springframework.beans.factory.annotation.Autowired
+    private PresenceService presenceService;
+
     private List<Score> scores = new ArrayList<>();
     private final ObjectMapper objectMapper;
     private final String SCORES_FILE = System.getenv().getOrDefault("SCORES_PATH", "scores.json");
@@ -86,7 +89,9 @@ public class ScoreService {
      * Récupère le top 10 des meilleurs scores pour un quiz
      */
     public List<Score> getTop10(String quizId) {
+        List<String> online = presenceService.getOnlinePlayers();
         return getScoresParQuiz(quizId).stream()
+                .filter(s -> online.contains(s.getPseudo()))
                 .limit(10)
                 .collect(Collectors.toList());
     }
