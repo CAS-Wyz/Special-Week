@@ -1,3 +1,7 @@
+const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+  ? 'http://localhost:8080'
+  : '';
+
 const CATEGORY_LABELS = {
   partie1: '// MODULE 1 — QU\'EST-CE QUE L\'IA ?',
   partie2: '// MODULE 2 — FAKE NEWS',
@@ -102,6 +106,16 @@ function showEndScreen() {
   else                    msg = 'Continue à apprendre ! Il te faut 150 pts minimum pour le badge.';
 
   document.getElementById('end-msg').textContent = msg;
+
+  // Sauvegarde du score sur le backend
+  const pseudo = localStorage.getItem('pseudo');
+  if (pseudo) {
+    fetch(API_BASE + '/api/scores', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pseudo, quizId: 'general', score, totalQuestions: questions.length })
+    }).catch(() => {});
+  }
 }
 
 function restartQuiz() {

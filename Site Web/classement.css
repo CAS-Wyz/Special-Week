@@ -1,0 +1,172 @@
+body {
+  background-color: #0d0015;
+  color: #e0d4f5;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+.classement-main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+/* ── Titre de section ── */
+.section-title {
+  color: #b026ff;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+/* ── Joueurs en ligne ── */
+.online-section {
+  background: #1a0a24;
+  border: 1px solid #3d1b54;
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 36px;
+}
+
+.online-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.online-dot {
+  width: 10px;
+  height: 10px;
+  background: #00c864;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+.online-count {
+  color: #8b7a9f;
+  font-size: 0.9em;
+}
+
+.online-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.player-chip {
+  background: rgba(176, 38, 255, 0.12);
+  border: 1px solid #5a2e7a;
+  color: #c9b8e8;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.9em;
+}
+
+.online-empty {
+  color: #5a2e7a;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* ── Classement ── */
+.leaderboard-section {
+  background: #1a0a24;
+  border: 1px solid #3d1b54;
+  border-radius: 14px;
+  padding: 28px;
+}
+
+/* Onglets */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: 1px solid #3d1b54;
+  color: #8b7a9f;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.85em;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-btn:hover {
+  border-color: #b026ff;
+  color: #e0d4f5;
+}
+
+.tab-btn.active {
+  background: #b026ff;
+  border-color: #b026ff;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Lignes du classement */
+.leaderboard-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid #2a1040;
+}
+
+.leaderboard-row:last-child {
+  border-bottom: none;
+}
+
+.rank {
+  color: #5a2e7a;
+  font-size: 0.85em;
+  width: 32px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.rank-1 { color: #ffd700; font-weight: 700; font-size: 1em; }
+.rank-2 { color: #c0c0c0; font-weight: 700; }
+.rank-3 { color: #cd7f32; font-weight: 700; }
+
+.lb-pseudo {
+  flex: 1;
+  color: #e0d4f5;
+  font-weight: 500;
+}
+
+.lb-score {
+  color: #b026ff;
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+.lb-date {
+  color: #5a2e7a;
+  font-size: 0.8em;
+  flex-shrink: 0;
+}
+
+.lb-empty {
+  color: #5a2e7a;
+  font-style: italic;
+  font-size: 0.9em;
+  padding: 20px 0;
+}
+
+.lb-loading {
+  color: #5a2e7a;
+  font-size: 0.9em;
+  padding: 20px 0;
+}

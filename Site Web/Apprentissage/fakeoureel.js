@@ -1,3 +1,7 @@
+const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+  ? 'http://localhost:8080'
+  : '';
+
 let questions = [];
 let currentIndex = 0;
 let score = 0;
@@ -82,4 +86,14 @@ function showEndScreen() {
       <p class="end-mention">${mention}</p>
       <a href="apprentissage.html" class="next-btn">Retour aux jeux</a>
     </div>`;
+
+  // Sauvegarde du score sur le backend
+  const pseudo = localStorage.getItem('pseudo');
+  if (pseudo) {
+    fetch(API_BASE + '/api/scores', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pseudo, quizId: 'fakeoureel', score, totalQuestions: 5 })
+    }).catch(() => {});
+  }
 }

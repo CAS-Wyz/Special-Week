@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classement — Clairvo'lAnce</title>
+  <link rel="stylesheet" href="classement.css">
+  <link rel="icon" type="image/png" href="src/Logo Special Week.png">
+</head>
+<body>
+  <script src="header.js"></script>
+  <script src="pseudo.js"></script>
+
+  <main class="classement-main">
+
+    <!-- Joueurs en ligne -->
+    <section class="online-section">
+      <div class="online-header">
+        <div class="online-dot"></div>
+        <p class="section-title" style="margin:0">Joueurs en ligne</p>
+        <span class="online-count" id="online-count"></span>
+      </div>
+      <div class="online-chips" id="online-list">
+        <span class="lb-loading">Chargement...</span>
+      </div>
+    </section>
+
+    <!-- Classements par quiz -->
+    <section class="leaderboard-section">
+      <p class="section-title">Classements</p>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-quiz="general">Quiz intégral</button>
+        <button class="tab-btn" data-quiz="partie1">Module 1</button>
+        <button class="tab-btn" data-quiz="partie2">Module 2</button>
+        <button class="tab-btn" data-quiz="partie3">Module 3</button>
+        <button class="tab-btn" data-quiz="partie4">Module 4</button>
+      </div>
+
+      <div id="leaderboard-content">
+        <span class="lb-loading">Chargement...</span>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="classement.js"></script>
+  <script src="footer.js"></script>
+</body>
+</html>

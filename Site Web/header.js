@@ -18,6 +18,7 @@
     { label: 'Documentation',     href: base + 'Documentation/documentation.html' },
     { label: 'Jeux interactifs',  href: base + 'Apprentissage/apprentissage.html' },
     { label: 'IA',                href: base + 'Fakebot/fakebot.html' },
+    { label: 'Classement',        href: base + 'classement.html' },
   ];
 
   // Détection de la page active
