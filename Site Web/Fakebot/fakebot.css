@@ -29,7 +29,9 @@ body{
 }
 
 main{
-    place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* ----- Conteneur principal ----- */
 .chat{
