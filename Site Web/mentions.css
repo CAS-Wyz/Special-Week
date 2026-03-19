@@ -1,0 +1,112 @@
+/* --- Base --- */
+body {
+  background-color: #0b0114;
+  color: #d1c4e9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.legal-main-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* --- En-tête --- */
+.back-link {
+  color: #b026ff;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: #e0d4f5;
+  text-decoration: underline;
+}
+
+h1 {
+  color: #e0d4f5;
+  font-size: 2.2em;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.last-updated {
+  color: #8b7a9f;
+  font-size: 0.9em;
+  margin-bottom: 40px;
+}
+
+/* --- Style de l'Accordéon --- */
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordion-btn {
+  background-color: #1a0a24;
+  color: #e0d4f5;
+  cursor: pointer;
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid #3d1b54;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* La petite flèche à droite du bouton */
+.accordion-btn::after {
+  content: '+';
+  font-size: 1.5em;
+  color: #b026ff;
+  transition: transform 0.4s;
+}
+
+.accordion-btn.active, .accordion-btn:hover {
+  background-color: #230e30;
+  border-color: #b026ff;
+}
+
+.accordion-btn.active::after {
+  content: '−';
+  transform: rotate(90deg);
+}
+
+/* --- Contenu caché --- */
+.accordion-content {
+  background-color: rgba(26, 10, 36, 0.5);
+  max-height: 0; /* Caché par défaut */
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  border-radius: 0 0 8px 8px;
+  margin-top: -10px; /* Pour coller au bouton */
+  border-left: 1px solid #3d1b54;
+  border-right: 1px solid #3d1b54;
+  border-bottom: 1px solid #3d1b54;
+  border-top: none;
+}
+
+/* On change la couleur de la bordure quand c'est ouvert */
+.accordion-btn.active + .accordion-content {
+  border-color: #b026ff;
+}
+
+.content-inner {
+  padding: 20px;
+  color: #8b7a9f;
+  line-height: 1.6;
+}
+
+.content-inner strong {
+  color: #e0d4f5;
+}
