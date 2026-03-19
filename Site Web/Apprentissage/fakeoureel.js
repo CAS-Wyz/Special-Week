@@ -23,7 +23,7 @@ function renderQuestion() {
 
   const q = questions[currentIndex];
 
-  // Mise à jour de la progression sans toucher au span séparément
+  // Mise à jour de la progression
   document.getElementById('progress-bar').innerHTML =
     `Question <span id="current-q">${currentIndex + 1}</span>/5`;
 
@@ -37,6 +37,12 @@ function renderQuestion() {
     const img = document.createElement('img');
     img.alt = 'À analyser';
     img.src = q.chemin;
+    
+    // NOUVEAU : On ajoute les propriétés pour le zoom
+    img.className = "clickable-image";
+    img.style.cursor = 'zoom-in';
+    img.onclick = () => openModal(q.chemin);
+    
     imageDisplay.appendChild(img);
   } else if (q.type === 'texte') {
     const p = document.createElement('p');
@@ -96,4 +102,19 @@ function showEndScreen() {
       body: JSON.stringify({ pseudo, quizId: 'fakeoureel', score, totalQuestions: 5 })
     }).catch(() => {});
   }
+}
+
+// --- NOUVEAU : Fonctions pour le Zoom Image (Modal) ---
+function openModal(imageSrc) {
+  const modal = document.getElementById('image-modal');
+  const modalImg = document.getElementById('modal-img');
+  if(modal && modalImg) {
+    modalImg.src = imageSrc;
+    modal.classList.remove('hidden');
+  }
+}
+
+function closeModal() {
+  const modal = document.getElementById('image-modal');
+  if(modal) modal.classList.add('hidden');
 }

@@ -358,3 +358,35 @@ body {
   border: 1px solid #b026ff;
   color: #e0d4f5;
 }
+/* --- Modal pour le zoom des images --- */
+#image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Pour être sûr qu'il passe par-dessus tout le reste */
+    cursor: zoom-out; /* Curseur qui indique qu'on peut cliquer pour fermer */
+}
+
+#image-modal.hidden {
+    display: none !important;
+}
+
+#modal-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.8);
+    /* Petite animation d'apparition */
+    transform: scale(0.9);
+    transition: transform 0.2s ease-out;
+}
+
+#image-modal:not(.hidden) #modal-img {
+    transform: scale(1);
+}
