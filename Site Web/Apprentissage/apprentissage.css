@@ -215,7 +215,9 @@ body {
 .choice-btn.real { background-color: #2e7d32; } /* Vert */
 .choice-btn.fake { background-color: #7b1fa2; } /* Violet foncé */
 
-.choice-btn:hover { transform: scale(1.05); }
+@media (hover: hover) {
+  .choice-btn:hover { transform: scale(1.05); }
+}
 
 .hidden { display: none !important; }
 
