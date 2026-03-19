@@ -328,10 +328,12 @@ body {
   text-align: left;
 }
 
-.option-btn:hover {
-  background-color: rgba(176, 38, 255, 0.1);
-  border-color: #b026ff;
-  transform: translateY(-2px);
+@media (hover: hover) {
+  .option-btn:hover {
+    background-color: rgba(176, 38, 255, 0.1);
+    border-color: #b026ff;
+    transform: translateY(-2px);
+  }
 }
 
 /* Style quand un bouton est cliqué/sélectionné */

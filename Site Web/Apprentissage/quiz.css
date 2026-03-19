@@ -154,10 +154,12 @@
   transition: all 0.25s ease;
 }
 
-.quiz-option:hover:not(:disabled) {
-  border-color: #b026ff;
-  color: #e0d4f5;
-  background-color: rgba(176, 38, 255, 0.1);
+@media (hover: hover) {
+  .quiz-option:hover:not(:disabled) {
+    border-color: #b026ff;
+    color: #e0d4f5;
+    background-color: rgba(176, 38, 255, 0.1);
+  }
 }
 
 .quiz-option:disabled {
