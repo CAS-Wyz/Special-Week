@@ -108,6 +108,10 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 
 // ── Init ─────────────────────────────────────────────────────────────────────
 
-loadOnlinePlayers();
+// On attend que le ping soit envoyé avant de charger les joueurs en ligne
+// pour que l'utilisateur courant apparaisse dès le premier chargement
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(loadOnlinePlayers, 500);
+});
 loadLeaderboard('general');
 setInterval(loadOnlinePlayers, 30000);
