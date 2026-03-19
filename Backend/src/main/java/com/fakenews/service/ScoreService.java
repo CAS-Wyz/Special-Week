@@ -72,7 +72,13 @@ public class ScoreService {
     public List<Score> getScoresParQuiz(String quizId) {
         return scores.stream()
                 .filter(s -> s.getQuizId().equals(quizId))
-                .sorted((a, b) -> b.getScore() - a.getScore()) // Tri décroissant
+                .collect(Collectors.toMap(
+                        Score::getPseudo,
+                        s -> s,
+                        (a, b) -> a.getDate().isAfter(b.getDate()) ? a : b
+                ))
+                .values().stream()
+                .sorted((a, b) -> b.getScore() - a.getScore())
                 .collect(Collectors.toList());
     }
 
