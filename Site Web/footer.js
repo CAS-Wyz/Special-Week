@@ -17,8 +17,8 @@
   <div class="footer-inner">
     <span class="footer-copy">© 2026 Clairvo'IAnce</span>
     <nav class="footer-nav">
-      <a href="/Site Web/mentions-legales.html">Mentions légales</a>
-      <a href="/Site Web/confidentialite.html">Confidentialité</a>
+      <a href="${base}mentions-legales.html">Mentions légales</a>
+      <a href="${base}confidentialite.html">Confidentialité</a>
     </nav>
   </div>
 </footer>
