@@ -4,6 +4,7 @@
  */
 (function () {
   const scriptSrc = document.currentScript
+  
     ? document.currentScript.src
     : '';
   const base = scriptSrc
@@ -14,10 +15,10 @@
 <link rel="stylesheet" href="${base}footer.css">
 <footer id="site-footer">
   <div class="footer-inner">
-    <span class="footer-copy">© 2026 CLAIREVO'lAnce</span>
+    <span class="footer-copy">© 2026 Clairvo'IAnce</span>
     <nav class="footer-nav">
-      <a href="#">Mentions légales</a>
-      <a href="#">Confidentialité</a>
+      <a href="/Site Web/mentions-legales.html">Mentions légales</a>
+      <a href="/Site Web/confidentialite.html">Confidentialité</a>
     </nav>
   </div>
 </footer>
