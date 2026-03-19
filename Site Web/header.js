@@ -84,4 +84,13 @@
       btn.setAttribute('aria-expanded', false);
     });
   });
+
+  // Fermer le menu en cliquant en dehors
+  document.addEventListener('click', (e) => {
+    if (nav.classList.contains('open') && !e.target.closest('#site-header')) {
+      nav.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', false);
+    }
+  });
 })();

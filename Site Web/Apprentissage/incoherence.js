@@ -185,4 +185,14 @@ function showEndScreen() {
       <p style="font-size: 1.2em; margin-bottom: 25px;">${mention}</p>
       <a href="apprentissage.html" class="next-btn" style="text-decoration: none; display: inline-block;">Retour au menu</a>
     </div>`;
+
+    // Sauvegarde du score sur le backend
+  const pseudo = sessionStorage.getItem('pseudo');
+  if (pseudo) {
+    fetch(API_BASE + '/api/scores', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pseudo, quizId: 'incoherence', score, totalQuestions: 6 })
+    }).catch(() => {});
+  }
 }
