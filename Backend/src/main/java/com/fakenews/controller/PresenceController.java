@@ -1,6 +1,8 @@
 package com.fakenews.controller;
 
 import com.fakenews.service.PresenceService;
+import com.fakenews.service.RateLimiterService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,13 +17,23 @@ public class PresenceController {
     @Autowired
     private PresenceService presenceService;
 
+    @Autowired
+    private RateLimiterService rateLimiter;
+
     /**
      * POST /api/presence/ping
      * Body : { "pseudo": "Alice" }
      * Met à jour la présence du joueur.
      */
     @PostMapping("/ping")
-    public ResponseEntity<?> ping(@RequestBody Map<String, String> body) {
+    public ResponseEntity<?> ping(@RequestBody Map<String, String> body, HttpServletRequest request) {
+        String ip = request.getRemoteAddr();
+
+        // Rate limiting : max 5 pings par IP par minute
+        if (!rateLimiter.isAllowed("ping:" + ip, 5, 60 * 1000)) {
+            return ResponseEntity.status(429).body(Map.of("erreur", "Trop de requêtes."));
+        }
+
         String pseudo = body.get("pseudo");
         try {
             presenceService.ping(pseudo);
