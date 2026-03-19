@@ -28,7 +28,7 @@ function resetScore() {
 
   localStorage.setItem('progression', JSON.stringify({
     quiz: 'NOUVEAU',
-    incoherence: 'NIVEAU 1',
+    incoherence: 'NOUVEAU',
     fakeOrReal: 'NOUVEAU'
   }));
   chargerBadges();
