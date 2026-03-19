@@ -1,16 +1,16 @@
 let questions = [];
 let currentIndex = 0;
-let score = 0; // On va compter le nombre d'incohérences trouvées au total
-let totalIncoherencesPossibles = 0; // Pour l'écran de fin
+let score = 0; // Compteur des incohérences trouvées (pour l'écran de fin)
+let totalIncoherencesPossibles = 0; 
 let userSelections = []; 
 
-// 1. Récupération des données JSON
+// 1. Récupération des données depuis le JSON
 fetch('../data/incoherences.json')
   .then(r => r.json())
   .then(data => {
     questions = data.incoherences;
     
-    // On calcule le nombre TOTAL de bonnes réponses possibles dans tout le jeu
+    // Calcul du nombre total de bonnes réponses possibles dans tout le jeu
     questions.forEach(q => {
       totalIncoherencesPossibles += q.correctIndex.length;
     });
@@ -19,7 +19,7 @@ fetch('../data/incoherences.json')
   })
   .catch(error => console.error("Erreur lors du chargement du JSON :", error));
 
-// 2. Affichage de la question
+// 2. Affichage d'une question
 function renderQuestion() {
   if (currentIndex >= questions.length) {
     showEndScreen();
@@ -27,31 +27,39 @@ function renderQuestion() {
   }
 
   const q = questions[currentIndex];
-  userSelections = [];
+  userSelections = []; // Reset des choix de l'utilisateur
 
+  // Mise à jour de la barre de progression
   document.getElementById('progress-bar').innerHTML = `Question <span id="current-q">${currentIndex + 1}</span>/${questions.length}`;
 
+  // Réinitialisation de l'affichage
   document.getElementById('feedback').classList.add('hidden');
   document.getElementById('valider-btn').classList.remove('hidden');
-  document.getElementById('options-grid').classList.remove('hidden');
-
+  
   const imageDisplay = document.getElementById('image-display');
   imageDisplay.innerHTML = '';
 
+  // Type IMAGE : Ajout du zoom au clic
   if (q.type === 'image') {
     const img = document.createElement('img');
     img.alt = 'À analyser';
     img.src = q.chemin;
+    img.className = "clickable-image"; // Pour le style CSS
     img.style.maxHeight = '300px';
     img.style.borderRadius = '8px';
+    img.style.cursor = 'zoom-in';
+    img.onclick = () => openModal(q.chemin); // Ouvre le zoom
     imageDisplay.appendChild(img);
-  } else if (q.type === 'texte') {
+  } 
+  // Type TEXTE
+  else if (q.type === 'texte') {
     const p = document.createElement('p');
     p.className = 'challenge-text';
     p.textContent = `"${q.texte}"`;
     imageDisplay.appendChild(p);
   }
 
+  // Génération des boutons d'options
   const optionsGrid = document.getElementById('options-grid');
   optionsGrid.innerHTML = ''; 
 
@@ -59,13 +67,12 @@ function renderQuestion() {
     const btn = document.createElement('button');
     btn.className = 'option-btn';
     btn.textContent = optText;
-    
     btn.onclick = () => toggleSelection(btn, index);
     optionsGrid.appendChild(btn);
   });
 }
 
-// 3. Gestion des clics sur les boutons
+// 3. Gestion de la sélection multiple
 function toggleSelection(btn, index) {
   if (userSelections.includes(index)) {
     userSelections = userSelections.filter(i => i !== index);
@@ -76,7 +83,7 @@ function toggleSelection(btn, index) {
   }
 }
 
-// 4. Vérification de la réponse avec points par bonne sélection
+// 4. Vérification et calcul des points (+5 pts par bonne réponse)
 function checkAnswer() {
   const q = questions[currentIndex];
   const boutons = document.querySelectorAll('.option-btn');
@@ -87,7 +94,7 @@ function checkAnswer() {
   let bonnesReponsesTrouvees = 0;
   let mauvaisesReponsesChoisies = 0;
 
-  // On compte ce que l'utilisateur a juste ou faux
+  // Analyse des choix de l'utilisateur
   userSelections.forEach(index => {
     if (q.correctIndex.includes(index)) {
       bonnesReponsesTrouvees++;
@@ -96,47 +103,42 @@ function checkAnswer() {
     }
   });
 
-  // Calcul des points (5 points par bonne réponse trouvée)
+  // Calcul du score gagné sur cette question
   let pointsGagnes = bonnesReponsesTrouvees * 5;
-  
-  // On ajoute au score local (pour l'écran de fin)
-  score += bonnesReponsesTrouvees;
+  score += bonnesReponsesTrouvees; // Pour le total final
 
-  // On ajoute au score global via ta fonction dans apprentissage.js
-  if (pointsGagnes > 0) {
-    if (typeof ajouterPoints === "function") {
-      ajouterPoints(pointsGagnes);
-    } else {
-      // Sécurité si la fonction n'est pas trouvée
-      const globalScore = parseInt(localStorage.getItem('globalScore')) || 0;
-      localStorage.setItem('globalScore', globalScore + pointsGagnes);
-    }
+  // Envoi au score global (localStorage)
+  const globalScore = parseInt(localStorage.getItem('globalScore')) || 0;
+  localStorage.setItem('globalScore', globalScore + pointsGagnes);
+  
+  // Si tu as la fonction animée ajouterPoints() dans apprentissage.js :
+  if (typeof ajouterPoints === "function" && pointsGagnes > 0) {
+    ajouterPoints(pointsGagnes);
   }
 
+  // Logique des messages
   let feedbackMsg = "";
   const feedbackDiv = document.getElementById('feedback');
-
-  // Détermination du message
   const toutTrouve = (bonnesReponsesTrouvees === q.correctIndex.length) && (mauvaisesReponsesChoisies === 0);
 
   if (toutTrouve) {
-    feedbackDiv.className = "feedback-success";
+    feedbackDiv.style.backgroundColor = "rgba(46, 204, 113, 0.2)";
     feedbackMsg = `✅ Parfait ! Tu as trouvé toutes les incohérences. (+${pointsGagnes} pts)`;
   } else if (bonnesReponsesTrouvees > 0) {
-    feedbackDiv.className = "feedback-neutral";
+    feedbackDiv.style.backgroundColor = "rgba(155, 89, 182, 0.2)";
     feedbackMsg = `👏 Bravo, mais tu n'as pas trouvé toutes les incohérences. (+${pointsGagnes} pts)`;
   } else {
-    feedbackDiv.className = "feedback-neutral"; // Tu peux créer une classe feedback-error si tu veux
-    feedbackMsg = "❌ Raté... Voici les bonnes réponses en vert.";
+    feedbackDiv.style.backgroundColor = "rgba(231, 76, 60, 0.2)";
+    feedbackMsg = "❌ Dommage... Voici ce qu'il fallait trouver.";
   }
 
-  // Colorer les boutons pour montrer la solution
+  // Coloration finale des boutons (Vert = solution, Rouge = erreur)
   boutons.forEach((btn, index) => {
     if (q.correctIndex.includes(index)) {
-      btn.style.borderColor = "#2ecc71"; // Les vraies bonnes réponses en vert
+      btn.style.borderColor = "#2ecc71";
       btn.style.color = "#2ecc71";
-    } else if (userSelections.includes(index) && !q.correctIndex.includes(index)) {
-      btn.style.borderColor = "#e74c3c"; // Les mauvais choix en rouge
+    } else if (userSelections.includes(index)) {
+      btn.style.borderColor = "#e74c3c";
       btn.style.color = "#e74c3c";
     }
   });
@@ -145,32 +147,42 @@ function checkAnswer() {
   feedbackDiv.classList.remove('hidden');
 }
 
-// 5. Passer à la question suivante
+// 5. Fonctions pour le Zoom Image (Modal)
+function openModal(imageSrc) {
+  const modal = document.getElementById('image-modal');
+  const modalImg = document.getElementById('modal-img');
+  if(modal && modalImg) {
+    modalImg.src = imageSrc;
+    modal.classList.remove('hidden');
+  }
+}
+
+function closeModal() {
+  const modal = document.getElementById('image-modal');
+  if(modal) modal.classList.add('hidden');
+}
+
+// 6. Question suivante ou fin
 function nextQuestion() {
   currentIndex++;
   renderQuestion();
 }
 
-// 6. Écran de fin adapté au nouveau système de score
 function showEndScreen() {
+  // Sauvegarde de la progression
   const progression = JSON.parse(localStorage.getItem('progression')) || {};
   progression.incoherence = 'TERMINÉ';
   localStorage.setItem('progression', JSON.stringify(progression));
 
   const pct = Math.round((score / totalIncoherencesPossibles) * 100);
-  let mention = '';
-  if (pct === 100) mention = 'Œil de lynx ! Parfait ! 👁️🏆';
-  else if (pct >= 50) mention = 'Bien joué, tu as l\'œil ! 👍';
-  else mention = 'Il faut être plus attentif aux détails ! 🔍';
+  let mention = pct === 100 ? 'Expert de l\'IA ! 🏆' : (pct >= 50 ? 'Bien joué ! 👍' : 'Entraîne-toi encore ! 💪');
 
-  document.querySelector('.card-container').innerHTML =
-    `<div class="end-screen" style="text-align: center;">
-      <h2>Résultat final</h2>
-      <p style="color: #8b7a9f; margin-top: 10px;">Incohérences débusquées :</p>
-      <div class="end-score" style="font-size: 2em; color: #b026ff; margin: 10px 0;">
-        ${score}<span> / ${totalIncoherencesPossibles}</span>
-      </div>
-      <p class="end-mention" style="font-size: 1.2em; margin-bottom: 30px;">${mention}</p>
-      <a href="apprentissage.html" class="next-btn" style="text-decoration: none;">Retour aux jeux</a>
+  document.querySelector('.card-container').innerHTML = `
+    <div class="end-screen" style="text-align: center; padding: 20px;">
+      <h2>Analyse terminée</h2>
+      <p>Incohérences débusquées :</p>
+      <div class="end-score" style="font-size: 3em; color: #b026ff; margin: 15px 0;">${score}<span>/${totalIncoherencesPossibles}</span></div>
+      <p style="font-size: 1.2em; margin-bottom: 25px;">${mention}</p>
+      <a href="apprentissage.html" class="next-btn" style="text-decoration: none; display: inline-block;">Retour au menu</a>
     </div>`;
 }

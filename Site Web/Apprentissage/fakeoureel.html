@@ -1,47 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake ou réel ?</title>
-      <link rel="stylesheet" href="apprentissage.css">
-      <link rel="icon" type="image/png" href="../src/Logo Special Week.png">
-
-
+    <link rel="stylesheet" href="apprentissage.css">
+    <link rel="icon" type="image/png" href="../src/Logo Special Week.png">
 </head>
 <body>
     <main class="game-wrapper">
-  <div class="game-header">
-    <a href="apprentissage.html" class="back-link">← Retour aux jeux</a>
-    <h1>Fake ou Réel ?</h1>
-    <div id="progress-bar">Question <span id="current-q">1</span>/5</div>
-  </div>
+      <div class="game-header">
+        <a href="apprentissage.html" class="back-link">← Retour aux jeux</a>
+        <h1>Fake ou Réel ?</h1>
+        <div id="progress-bar">Question <span id="current-q">1</span>/5</div>
+      </div>
 
-  <div class="card-container">
-    <div id="image-display">
-      <img id="game-image" src="images/photo1.jpg" alt="A analyser">
-    </div>
+      <div class="card-container">
+        <div id="image-display">
+          </div>
 
-    <div id="feedback" class="hidden">
-      <p id="feedback-text"></p>
-      <button onclick="nextQuestion()" class="next-btn">Suivant</button>
-    </div>
+        <div id="feedback" class="hidden">
+          <p id="feedback-text"></p>
+          <button onclick="nextQuestion()" class="next-btn">Suivant</button>
+        </div>
 
-    <div id="choices" class="choice-container">
-      <button class="choice-btn real" onclick="checkAnswer(true)">
-        <span>📸</span> RÉEL
-      </button>
-      <button class="choice-btn fake" onclick="checkAnswer(false)">
-        <span>🤖</span> GÉNÉRÉ PAR IA
-      </button>
-    </div>
-  </div>
-</main>
+        <div id="choices" class="choice-container">
+          <button class="choice-btn real" onclick="checkAnswer(true)">
+            <span>📸</span> RÉEL
+          </button>
+          <button class="choice-btn fake" onclick="checkAnswer(false)">
+            <span>🤖</span> GÉNÉRÉ PAR IA
+          </button>
+        </div>
+      </div>
 
-  <script src="../header.js"></script>
-  
-  <script src="fakeoureel.js"></script>
-  <script src="../footer.js"></script>
-    
+      <div id="image-modal" class="hidden" onclick="closeModal()">
+        <img id="modal-img" src="" alt="Image en grand">
+      </div>
+      
+    </main>
+
+    <script src="../header.js"></script>
+    <script src="fakeoureel.js"></script>
+    <script src="../footer.js"></script>
 </body>
 </html>
