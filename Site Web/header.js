@@ -21,9 +21,6 @@
     { label: 'Classement',        href: base + 'classement.html' },
   ];
 
-  // Détection de la page active
-  const currentPath = window.location.pathname.toLowerCase();
-
   function isActive(href) {
     try {
       const url = new URL(href, window.location.href);
@@ -40,6 +37,9 @@
       return `<a href="${link.href}"${active}>${link.label}</a>`;
     })
     .join('\n        ');
+
+  const siteUrl = window.location.origin;
+  const qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=220x220&bgcolor=1a0a24&color=ffffff&data=' + encodeURIComponent(siteUrl);
 
   const headerHTML = `
 <link rel="stylesheet" href="${base}header.css">
@@ -59,8 +59,26 @@
     <nav class="header-nav">
         ${navHTML}
     </nav>
+
+    <button class="header-qr-btn" aria-label="QR Code">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+        <rect x="3" y="14" width="7" height="7" rx="1"/>
+        <rect x="14" y="14" width="3" height="3"/><rect x="19" y="17" width="2" height="4"/><rect x="14" y="19" width="5" height="2"/>
+      </svg>
+      <span>Partager</span>
+    </button>
   </div>
 </header>
+
+<div id="qr-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);align-items:center;justify-content:center;z-index:9999;">
+  <div class="qr-modal">
+    <button class="qr-close" aria-label="Fermer">✕</button>
+    <p class="qr-title">Rejoindre le site</p>
+    <img src="${qrUrl}" alt="QR Code" class="qr-img">
+    <p class="qr-url">${siteUrl}</p>
+  </div>
+</div>
 `;
 
   // Injecter au début du <body>
@@ -83,6 +101,22 @@
       btn.classList.remove('open');
       btn.setAttribute('aria-expanded', false);
     });
+  });
+
+  // QR Code modal
+  const qrBtn = document.querySelector('.header-qr-btn');
+  const qrOverlay = document.getElementById('qr-overlay');
+  const qrClose = document.querySelector('.qr-close');
+
+  const showQr = () => { qrOverlay.style.display = 'flex'; };
+  const hideQr = () => { qrOverlay.style.display = 'none'; };
+
+  qrBtn.addEventListener('click', () => {
+    qrOverlay.style.display === 'flex' ? hideQr() : showQr();
+  });
+  qrClose.addEventListener('click', hideQr);
+  qrOverlay.addEventListener('click', (e) => {
+    if (e.target === qrOverlay) hideQr();
   });
 
   // Fermer le menu en cliquant en dehors
